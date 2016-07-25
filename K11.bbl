@@ -1,0 +1,123 @@
+ \newcommand{\noop}[1]{}
+\begin{thebibliography}{}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Adibekyan} {et~al.}(2012{\natexlab{a}}){Adibekyan}, {Delgado Mena},
+  {Sousa}, {Santos}, {Israelian}, {Gonz{\'a}lez Hern{\'a}ndez}, {Mayor}, \&
+  {Hakobyan}}]{Adibekyan2012b}
+{Adibekyan}, V.~Z., {Delgado Mena}, E., {Sousa}, S.~G., {et~al.}
+  2012{\natexlab{a}}, \aap, 547, A36
+
+\bibitem[{{Adibekyan} {et~al.}(2012{\natexlab{b}}){Adibekyan}, {Sousa},
+  {Santos}, {Delgado Mena}, {Gonz{\'a}lez Hern{\'a}ndez}, {Israelian}, {Mayor},
+  \& {Khachatryan}}]{Adibekyan2012}
+{Adibekyan}, V.~Z., {Sousa}, S.~G., {Santos}, N.~C., {et~al.}
+  2012{\natexlab{b}}, \aap, 545, A32
+
+\bibitem[{{Bedell} {et~al.}(2014){Bedell}, {Mel{\'e}ndez}, {Bean},
+  {Ram{\'{\i}}rez}, {Leite}, \& {Asplund}}]{Bedell2014}
+{Bedell}, M., {Mel{\'e}ndez}, J., {Bean}, J.~L., {et~al.} 2014, \apj, 795, 23
+
+\bibitem[{{Bensby} {et~al.}(2014){Bensby}, {Feltzing}, \& {Oey}}]{Bensby2014}
+{Bensby}, T., {Feltzing}, S., \& {Oey}, M.~S. 2014, \aap, 562, A71
+
+\bibitem[{{Chambers}(2010)}]{Chambers2010}
+{Chambers}, J.~E. 2010, \apj, 724, 92
+
+\bibitem[{{dos Santos} {et~al.}(2016){dos Santos}, {Mel{\'e}ndez}, {do
+  Nascimento}, {Bedell}, {Ram{\'{\i}}rez}, {Bean}, {Asplund}, {Spina},
+  {Dreizler}, {Alves-Brito}, \& {Casagrande}}]{dosSantos2016}
+{dos Santos}, L.~A., {Mel{\'e}ndez}, J., {do Nascimento}, Jr., J.-D., {et~al.}
+  2016, \aap, arXiv:1606.06214
+
+\bibitem[{Epstein {et~al.}(2010)Epstein, Johnson, Dong, Udalski, Gould, \&
+  Becker}]{Epstein2010}
+Epstein, C.~R., Johnson, J.~a., Dong, S., {et~al.} 2010, The Astrophysical
+  Journal, 709, 447
+
+\bibitem[{{Hands} {et~al.}(2014){Hands}, {Alexander}, \& {Dehnen}}]{Hands2014}
+{Hands}, T.~O., {Alexander}, R.~D., \& {Dehnen}, W. 2014, \mnras, 445, 749
+
+\bibitem[{{Ikoma} \& {Hori}(2012)}]{Ikoma2012}
+{Ikoma}, M., \& {Hori}, Y. 2012, \apj, 753, 66
+
+\bibitem[{{Kipping}(2014)}]{Kipping2014}
+{Kipping}, D.~M. 2014, \mnras, 440, 2164
+
+\bibitem[{{Lissauer} {et~al.}(2011){Lissauer}, {Fabrycky}, {Ford}, {Borucki},
+  {Fressin}, {Marcy}, {Orosz}, {Rowe}, {Torres}, {Welsh}, {Batalha}, {Bryson},
+  {Buchhave}, {Caldwell}, {Carter}, {Charbonneau}, {Christiansen}, {Cochran},
+  {Desert}, {Dunham}, {Fanelli}, {Fortney}, {Gautier}, {Geary}, {Gilliland},
+  {Haas}, {Hall}, {Holman}, {Koch}, {Latham}, {Lopez}, {McCauliff}, {Miller},
+  {Morehead}, {Quintana}, {Ragozzine}, {Sasselov}, {Short}, \&
+  {Steffen}}]{Lissauer2011}
+{Lissauer}, J.~J., {Fabrycky}, D.~C., {Ford}, E.~B., {et~al.} 2011, \nat, 470,
+  53
+
+\bibitem[{{Lissauer} {et~al.}(2013){Lissauer}, {Jontof-Hutter}, {Rowe},
+  {Fabrycky}, {Lopez}, {Agol}, {Marcy}, {Deck}, {Fischer}, {Fortney}, {Howell},
+  {Isaacson}, {Jenkins}, {Kolbl}, {Sasselov}, {Short}, \&
+  {Welsh}}]{Lissauer2013}
+{Lissauer}, J.~J., {Jontof-Hutter}, D., {Rowe}, J.~F., {et~al.} 2013, \apj,
+  770, 131
+
+\bibitem[{{Lodders}(2003)}]{Lodders2003}
+{Lodders}, K. 2003, \apj, 591, 1220
+
+\bibitem[{{Mahajan} \& {Wu}(2014)}]{Mahajan2014}
+{Mahajan}, N., \& {Wu}, Y. 2014, \apj, 795, 32
+
+\bibitem[{{Mel{\'e}ndez} {et~al.}(2009){Mel{\'e}ndez}, {Asplund}, {Gustafsson},
+  \& {Yong}}]{Melendez2009}
+{Mel{\'e}ndez}, J., {Asplund}, M., {Gustafsson}, B., \& {Yong}, D. 2009, \apjl,
+  704, L66
+
+\bibitem[{{Mel{\'e}ndez} {et~al.}(2012){Mel{\'e}ndez}, {Bergemann}, {Cohen},
+  {Endl}, {Karakas}, {Ram{\'{\i}}rez}, {Cochran}, {Yong}, {MacQueen},
+  {Kobayashi}, \& {Asplund}}]{Melendez2012}
+{Mel{\'e}ndez}, J., {Bergemann}, M., {Cohen}, J.~G., {et~al.} 2012, \aap, 543,
+  A29
+
+\bibitem[{{Migaszewski} {et~al.}(2012){Migaszewski}, {S{\l}onina}, \&
+  {Go{\'z}dziewski}}]{Migaszewski2012}
+{Migaszewski}, C., {S{\l}onina}, M., \& {Go{\'z}dziewski}, K. 2012, \mnras,
+  427, 770
+
+\bibitem[{{Nissen}(2015)}]{Nissen2015}
+{Nissen}, P.~E. 2015, \aap, 579, A52
+
+\bibitem[{{Ram{\'{\i}}rez} {et~al.}(2014){Ram{\'{\i}}rez}, {Mel{\'e}ndez},
+  {Bean}, {Asplund}, {Bedell}, {Monroe}, {Casagrande}, {Schirbel}, {Dreizler},
+  {Teske}, {Tucci Maia}, {Alves-Brito}, \& {Baumann}}]{Ramirez2014}
+{Ram{\'{\i}}rez}, I., {Mel{\'e}ndez}, J., {Bean}, J., {et~al.} 2014, \aap, 572,
+  A48
+
+\bibitem[{{Rowe} {et~al.}(2014){Rowe}, {Bryson}, {Marcy}, {Lissauer},
+  {Jontof-Hutter}, {Mullally}, {Gilliland}, {Issacson}, {Ford}, {Howell},
+  {Borucki}, {Haas}, {Huber}, {Steffen}, {Thompson}, {Quintana}, {Barclay},
+  {Still}, {Fortney}, {Gautier}, {Hunter}, {Caldwell}, {Ciardi}, {Devore},
+  {Cochran}, {Jenkins}, {Agol}, {Carter}, \& {Geary}}]{Rowe2014}
+{Rowe}, J.~F., {Bryson}, S.~T., {Marcy}, G.~W., {et~al.} 2014, \apj, 784, 45
+
+\bibitem[{{Sneden}(1973)}]{Sneden1973}
+{Sneden}, C.~A. 1973, PhD thesis, THE UNIVERSITY OF TEXAS AT AUSTIN.
+
+\bibitem[{{Spina} {et~al.}(2016{\natexlab{a}}){Spina}, {Mel{\'e}ndez},
+  {Karakas}, {Ram{\'{\i}}rez}, {Monroe}, {Asplund}, \& {Yong}}]{Spina2016b}
+{Spina}, L., {Mel{\'e}ndez}, J., {Karakas}, A.~I., {et~al.} 2016{\natexlab{a}},
+  \aap
+
+\bibitem[{{Spina} {et~al.}(2016{\natexlab{b}}){Spina}, {Mel{\'e}ndez}, \&
+  {Ram{\'{\i}}rez}}]{Spina2016}
+{Spina}, L., {Mel{\'e}ndez}, J., \& {Ram{\'{\i}}rez}, I. 2016{\natexlab{b}},
+  \aap, 585, A152
+
+\bibitem[{{Tucci Maia} {et~al.}(2016){Tucci Maia}, {Ram{\'{\i}}rez},
+  {Mel{\'e}ndez}, {Bedell}, {Bean}, \& {Asplund}}]{TucciMaia2016}
+{Tucci Maia}, M., {Ram{\'{\i}}rez}, I., {Mel{\'e}ndez}, J., {et~al.} 2016,
+  \aap, 590, A32
+
+\bibitem[{{Valenti} \& {Piskunov}(1996)}]{Valenti1996}
+{Valenti}, J.~A., \& {Piskunov}, N. 1996, \aaps, 118, 595
+
+\end{thebibliography}
