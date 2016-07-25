@@ -1,7 +1,6 @@
-K11.aux
-K11.blg
-K11.log
-K11.out
-K11.pdf
-K11.synctex.gz
+*.aux
+*.blg
+*.log
+*.out
+*.synctex.gz
 K11Notes.bib
