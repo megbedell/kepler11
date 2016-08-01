@@ -41,6 +41,11 @@
 Epstein, C.~R., Johnson, J.~a., Dong, S., {et~al.} 2010, The Astrophysical
   Journal, 709, 447
 
+\bibitem[{{Hall} {et~al.}(2009){Hall}, {Henry}, {Lockwood}, {Skiff}, \&
+  {Saar}}]{Hall2009}
+{Hall}, J.~C., {Henry}, G.~W., {Lockwood}, G.~W., {Skiff}, B.~A., \& {Saar},
+  S.~H. 2009, \aj, 138, 312
+
 \bibitem[{{Hands} {et~al.}(2014){Hands}, {Alexander}, \& {Dehnen}}]{Hands2014}
 {Hands}, T.~O., {Alexander}, R.~D., \& {Dehnen}, W. 2014, \mnras, 445, 749
 
@@ -111,6 +116,9 @@ Epstein, C.~R., Johnson, J.~a., Dong, S., {et~al.} 2010, The Astrophysical
   {Cochran}, {Jenkins}, {Agol}, {Carter}, \& {Geary}}]{Rowe2014}
 {Rowe}, J.~F., {Bryson}, S.~T., {Marcy}, G.~W., {et~al.} 2014, \apj, 784, 45
 
+\bibitem[{{Skumanich}(1972)}]{Skumanich1972}
+{Skumanich}, A. 1972, \apj, 171, 565
+
 \bibitem[{{Sneden}(1973)}]{Sneden1973}
 {Sneden}, C.~A. 1973, PhD thesis, THE UNIVERSITY OF TEXAS AT AUSTIN.
 
@@ -131,5 +139,9 @@ Epstein, C.~R., Johnson, J.~a., Dong, S., {et~al.} 2010, The Astrophysical
 
 \bibitem[{{Valenti} \& {Piskunov}(1996)}]{Valenti1996}
 {Valenti}, J.~A., \& {Piskunov}, N. 1996, \aaps, 118, 595
+
+\bibitem[{{Wang} {et~al.}(2015){Wang}, {Fischer}, {Horch}, \& {Xie}}]{Wang2015}
+{Wang}, J., {Fischer}, D.~A., {Horch}, E.~P., \& {Xie}, J.-W. 2015, \apj, 806,
+  248
 
 \end{thebibliography}

@@ -16,7 +16,7 @@
 \graphicspath{ {figures/} }
 \DeclareGraphicsExtensions{.pdf,.eps,.png}
 
-\title{Revising the Kepler-11 system: a testament to the importance of precise stellar characterization}
+\title{Revising the Kepler-11 system: a testament to the importance of precise stellar characterization \todo{(change title?)}}
 
 \author{Megan Bedell\altaffilmark{1},
 Jacob L. Bean\altaffilmark{1},
@@ -69,9 +69,11 @@ The spectral extraction was performed by the Mauna Kea Echelle Extraction (MAKEE
 
 \section{Stellar Properties from Spectroscopic Analysis}
 
-The fundamental properties of Kepler-11 and its potential twins were derived from an equivalent width analysis. We hand-measured 94 Fe I and 17 Fe II spectral lines using IRAF's \textit{splot}. The line list was chosen \todo{(criteria, cite)}. Equivalent widths were measured by carefully choosing local continua as described in \citet{Bedell2014} to maximize differential precision between the spectra. The full line list and measured equivalent widths are available in Table \ref{tbl:ews}.
+The fundamental properties of Kepler-11 and its potential twins were derived from an equivalent width analysis. We hand-measured 94 Fe I and 17 Fe II spectral lines using IRAF's \textit{splot}. The line list was chosen \todo{(criteria, cite)}. Equivalent widths were measured by carefully choosing local continua as described in \citet{Bedell2014} to maximize differential precision between the spectra. The full line list and measured equivalent widths are available in \todo{Table \ref{tbl:ews}}.
 
-The stellar effective temperature \teff, surface gravity \logg, metallicity \feh, and microturbulence $v_t$ were determined by imposing requirements of excitation and ionization balance on the iron abundances derived by MOOG \citep{Sneden1973}. It is important to note that we exclusively used the differential abundance measurements relative to the solar spectrum. By directly comparing line-by-line differential abundances of spectrally similar stars, we minimize the influence of stellar model systematics on the final parameters and abundances \citep[see e.g.][]{Ramirez2014}. Parameter solutions were found iteratively using the $q^2$ python package.\footnote{\url{https://github.com/astroChasqui/q2}} Uncertainties were determined by propagating scatter among the measured line abundances as described in \citet{Epstein2010, Bensby2014}.
+The stellar effective temperature \teff, surface gravity \logg, metallicity \feh, and microturbulence $v_t$ were determined by imposing requirements of excitation and ionization balance on the iron abundances derived by MOOG \citep{Sneden1973}. It is important to note that we exclusively used the differential abundance measurements relative to the solar spectrum. By directly comparing line-by-line differential abundances of spectrally similar stars, we minimize the influence of stellar model systematics on the final parameters and abundances \citep[see e.g.][]{Ramirez2014}. 
+
+Parameter solutions were found iteratively using the $q^2$ python package.\footnote{\url{https://github.com/astroChasqui/q2}} Uncertainties were determined by propagating scatter among the measured line abundances as described in \citet{Epstein2010, Bensby2014}.
 
 The resulting stellar parameters for all observed stars are given in Table \ref{tbl:param}. The \teff and \logg for Kepler-11 are significantly higher than previously determined values. For example, \citet{Lissauer2013} find \teff = 5666 $\pm$ 60 K, \logg = 4.28 $\pm$ 0.07 dex, and \feh = 0.00 $\pm$ 0.04 dex, while we find \teff = 5839 $\pm$ 7 K, \logg = 4.45 $\pm$ 0.02 dex, and \feh = 0.06 $\pm$ 0.01 dex. Potential sources of this tension include the substantially different SNR of spectra used and the difference in analysis technique. \citet{Lissauer2013} and other previous analyses use SME, which employs a library of synthetic spectra to do spectral matching. 
 
@@ -124,7 +126,7 @@ While mass, radius, and density cannot be measured through other methods from th
 
 The apparent rotation rate \vsini was measured using five saturated lines (Fe I 6027.050 \r{A}, 6151.618 \r{A}, 6165.360 \r{A}, 6705.102 \r{A}, and Ni I 6767.772 \r{A}) from the Keck spectrum. The procedure used is described in depth in \citet{dosSantos2016}, and will be summarized here. We first measured the macroturbulence value \vmacro for each line in the solar reference spectrum with MOOG \textit{synth}. We then calculated \vmacro for Kepler-11 using the measured solar values and the empirical relation given in Equation 1 of \citet{dosSantos2016}. Finally, MOOG \textit{synth} was used to find \vsini for each line in Kepler-11's spectrum with \vmacro fixed to the calculated value.
 
-The five lines give a consistent result of \vsini = 2.2 $\pm$ 0.2 \kms. Assuming alignment of the stellar spin axis with the orbital axis of its transiting planets, we can take \vsini as the true rotational velocity. This translates to an age of \todo{\textbf{x} using \textbf{x}, or \textbf{x}} from \citet{dosSantos2016}'s updated relation.
+The five lines give a consistent result of \vsini = 2.2 $\pm$ 0.2 \kms. Assuming alignment of the stellar spin axis with the orbital axis of its transiting planets, we can take \vsini as the true rotational velocity. This translates to an age of \todo{\textbf{x} using the law of \citet{Skumanich1972}, or \textbf{x}} from \citet{dosSantos2016}'s updated relation.
 %Adopting a stellar inclination $i$ = 89.1$^{\circ}$ from \citet{Lissauer2013} and a stellar radius 1.00 \pm$ 0.02 $R_{\odot}$ gives a rotation period of 23 $\pm$ \textbf{x} days.
 
 \subsection{Lithium Abundance}
@@ -134,19 +136,21 @@ The lithium abundance of Kepler-11 was measured by synthesizing the Li I 6707.8 
 
 \begin{figure}
 \centering
-%\includegraphics[width=\columnwidth]{lithium}
-\caption{Spectra and synthetic fit for Kepler-11 (red) and the Sun (blue) around the Li I 6707.8 \r{A} line.}
+\includegraphics[width=\columnwidth]{lithium}
+\caption{Observed spectrum of Kepler-11 around the Li I 6707.8 \r{A} line. Synthetic fits for the best-fit Li abundance (red) and the solar Li abundance (red) are overplotted. \todo{(fix up this fit!)}}
 \label{fig:lithium}
 \end{figure}
 
 
 \subsection{[Y/Mg] Abundance Ratio}
 
-Recent works by \citet{Nissen2015} and \citet{TucciMaia2016} have identified the ratio of yttrium to magnesium abundances as an excellent proxy for age in main-sequence Sun-like stars. We measured these abundances as described in Section \ref{s:abundances} and found a [Y/Mg] ratio of \todo{\textbf{x}}. Using the age relation from \citet{TucciMaia2016}, this suggests an age of 4.0 $\pm$ 0.7 Gyr.
+Recent works by \citet{Nissen2015} and \citet{TucciMaia2016} have identified the ratio of yttrium to magnesium abundances as an excellent proxy for age in main-sequence Sun-like stars. We measured these abundances as described in Section \ref{s:abundances} and found a [Y/Mg] ratio of 0.04 $\pm$ 0.05 dex. Using the age relation from \citet{TucciMaia2016}, this gives an age of 4.0 $\pm$ 0.7 Gyr. \todo{double-check these numbers}
 
 \subsection{Chromospheric Emission}
 
-We measured the chromospheric emission level of Kepler-11 using the Ca II H\&K lines in the spectrum. \todo{finish}
+We measured the chromospheric emission level of Kepler-11 using the Ca II H line. Since our spectral coverage cut off around 390 nm at the blue end, it was not possible to obtain a measurement of the standard chromospheric activity index $\log(\mathrm{R'_{HK}})$. Instead, we defined an alternative index \textit{H} as the flux integrated from a 1.3 \r{A} width triangular filter centered on the H line at 3968.47 \r{A}, divided by the continuum integrated with a flat filter of 5 \r{A} width around 3979.8 \r{A}.  \todo{conversion details}
+
+We find an activity index $\log(\mathrm{R'_{HK}})$ = -4.78. This is slightly higher than the maximum activity level of the solar cycle and suggests a sub-solar age \citep{Hall2009, Ramirez2014}.
 
 
 \section{Stellar Abundances}
@@ -163,30 +167,35 @@ Based on our analysis, Kepler-11 appears to be a ``typical'' solar twin: that is
 \begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{K11_Tc_break}
-\caption{Differential element abundances of Kepler-11 as a function of the condensation temperature of the element within the protoplanetary disk. The spectral abundances are plotted in blue, and abundances after a GCE correction is applied are in red. \todo{Best-fit models were derived using a }}
+\caption{Differential element abundances of Kepler-11 as a function of the condensation temperature of the element within the protoplanetary disk. The spectral abundances are plotted in blue, and abundances after a GCE correction is applied are in red. Best-fit models were derived using a least-squares fit to a linear piecewise function with the temperature break as a free parameter. \todo{(add in K abundance and maybe a legend with slope values!)}}
 \label{fig:tc}
 \end{figure}
 
-%***NOTE: add in K abundance and maybe a legend with slope values!
 
 
 
 \section{Stellar Properties from Transit \& TTV Analysis}
 
-\todo{write this section}
+\todo{get Sean to write this section}
 
 \section{Discussion}
 \subsection{Discrepancies in Stellar Densities}
 
 The stellar densities found through spectroscopic characterization (1.47 $\pm$ 0.09 \gcm) and photodynamical modeling (1.13 $\pm$ 0.07 \gcm) are inconsistent at the level of $\sim$3$\sigma$. While spectroscopically-derived densities can be strongly dependent on imperfect stellar isochrone models, we note that in this case Kepler-11's extreme similarity to the Sun places it near the anchor point of most models, increasing the accuracy of isochronal analysis. Moreover, multiple independent methods support the result of a young, non-evolved age and therefore a solar-like density for Kepler-11.
 
-An alternative hypothesis is that some bias in the transit analysis has resulted in an erroneously low inferred stellar density. As described by \citet{Kipping2014}, multiple effects can bias the density measured by transits, including stellar activity, blended background sources, and non-zero planet eccentricities. \todo{(discuss in detail)}
+An alternative hypothesis is that some bias in the transit analysis has resulted in an erroneously low inferred stellar density. As described by \citet{Kipping2014}, multiple effects can bias the density measured by transits, including stellar activity, blended background sources, and non-zero planet eccentricities. Bias due to an underestimated planet eccentricity is not a likely explanation in this case, since all five planets give a consistent stellar density. Also, the photodynamical modeling used in this analysis should be robust to the effects of transit timing or duration variations on the measured stellar density. This leaves two potentially viable explanations from \citet{Kipping2014} for the density discrepancy: stellar activity (the ``photospot'' effect) or a background source (the ``photoblend'' effect).
+
+Starspots effectively reduce the observed stellar flux, artificially raising stellar density inferred from the transit depth, which is the opposite of the effect we seek to explain. However, as a middle-aged Sun-like star, Kepler-11's activity may manifest mostly in the form of plages \todo{(cite)}. Unocculted plages could potentially lower the observed stellar density. Given the observed behavior of other main-sequence solar analogs and the lack of rotational modulation in the \textit{Kepler} lightcurve, the filling factor for spots or plages on Kepler-11's surface should be of order 1\% \todo{(cite)}. This would yield a similarly small change in the observed stellar density \citep[O($10^{-2}$),][]{Kipping2014}. Furthermore, the plage configuration would need to be relatively stable throughout \textit{Kepler}'s four years of observations, since the transit depths do not noticeably change with time \todo{(check with Sean on this)}, which is unlikely at the high level of activity needed to have a filling factor $\gg$ 1\%.
+
+The final effect is blending of unresolved background sources, which can cause stellar density to be underestimated. Recently \citet{Wang2015} found two visual companions to Kepler-11 at separations of 1.36'' and 4.9'' using AO imaging, both potentially within Kepler's resolution. With brightness differences of $\Delta K$ = 4.4 mag and 4.7 mag respectively, these companions should contribute approximately 3\% of the total flux in the Kepler bandpass \todo{(true?)}. Using Equation 9 of \citet{Kipping2014}, this implies that the observed stellar density from transits should be $\sim$99\% of the true density. The known companions are therefore insufficient to explain the magnitude of the density discrepancy.
+
+\todo{so what is the explanation???}
 
 \subsection{Implications for Planets}
 
 The mass and radius of Kepler-11 has considerable repercussions for its planetary system. We approximate the planet mass derived from TTVs as a linear function of the assumed stellar mass. The planet radius also has a linear dependence on stellar radius, since only the relative surface areas of planet and star can be measured by the transit depth. The stellar properties obtained through spectroscopic analysis therefore raise the planet masses by a factor of 8\% and lower the planet radii by a factor of 6\% relative to the transit and TTV-derived values. The results are shown in Figure \ref{fig:mr}.
 
-Adopting the stellar properties from spectroscopic analysis raises the mean densities of the Kepler-11 planets by $\sim$30\%. This change may go a long way in resolving... \todo{finish}
+Adopting the stellar properties from spectroscopic analysis raises the mean densities of the Kepler-11 planets by $\sim$30\%. This change may go a long way in resolving the lingering debate over the viability of in-situ formation of these planets. \todo{(finish - talk to Leslie?)}
 
 \begin{figure}
 \centering
@@ -198,7 +207,9 @@ Adopting the stellar properties from spectroscopic analysis raises the mean dens
 
 \section{Conclusion}
 
-Using an extremely high-quality spectrum of the multi-planet host star Kepler-11, we have... \todo{finish}
+Using an extremely high-quality spectrum of the multi-planet host star Kepler-11, we have measured the stellar fundamental parameters and abundances to percent-level precision. We have also used a photodynamical model to fit the full \textit{Kepler} lightcurve. Our planet parameters agree with past publications. However, we find that the host star is substantially younger than previously thought. Based on spectroscopic results, Kepler-11 and its planets are $\sim$30\% denser than previously reported.
+
+The five inner planets of the Kepler-11 system are key members of the exoplanet mass-radius diagram as examples of the surprisingly low densities found in some planetary systems. The substantial revision of their properties reported here underscores the importance of detailed host star follow-up. As the community looks to exponentially increase the number of exoplanets with measured bulk densities through TESS and beyond, it is critical to prioritize securing precise host star properties through follow-up. \todo{(...laying it on too thick?)}
 
 \bigskip
 \acknowledgements{M.B. is supported by a National Science Foundation Graduate Research Fellowship under Grant No. DGE-1144082.  J.L.B. acknowledges support for this work from the NSF (grant number AST-1313119) and the Alfred P. Sloan Foundation.  J.M. thanks FAPESP (2012/24392-2). \todo{update \& finish}}
