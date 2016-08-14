@@ -24,9 +24,6 @@
 \bibitem[{{Bodenheimer} \& {Lissauer}(2014)}]{Bodenheimer2014}
 {Bodenheimer}, P., \& {Lissauer}, J.~J. 2014, \apj, 791, 103
 
-\bibitem[{{Boley} {et~al.}(2014){Boley}, {Morris}, \& {Ford}}]{Boley2014}
-{Boley}, A.~C., {Morris}, M.~A., \& {Ford}, E.~B. 2014, \apjl, 792, L27
-
 \bibitem[{{Chambers}(2010)}]{Chambers2010}
 {Chambers}, J.~E. 2010, \apj, 724, 92
 
@@ -107,6 +104,9 @@ Epstein, C.~R., Johnson, J.~a., Dong, S., {et~al.} 2010, The Astrophysical
 \bibitem[{{Nissen}(2015)}]{Nissen2015}
 {Nissen}, P.~E. 2015, \aap, 579, A52
 
+\bibitem[{{P{\'a}l}(2012)}]{2012MNRAS.420.1630P}
+{P{\'a}l}, A. 2012, \mnras, 420, 1630
+
 \bibitem[{{Ram{\'{\i}}rez} {et~al.}(2014){Ram{\'{\i}}rez}, {Mel{\'e}ndez},
   {Bean}, {Asplund}, {Bedell}, {Monroe}, {Casagrande}, {Schirbel}, {Dreizler},
   {Teske}, {Tucci Maia}, {Alves-Brito}, \& {Baumann}}]{Ramirez2014}
@@ -135,6 +135,9 @@ Epstein, C.~R., Johnson, J.~a., Dong, S., {et~al.} 2010, The Astrophysical
   {Ram{\'{\i}}rez}}]{Spina2016}
 {Spina}, L., {Mel{\'e}ndez}, J., \& {Ram{\'{\i}}rez}, I. 2016{\natexlab{b}},
   \aap, 585, A152
+
+\bibitem[{{Ter Braak}(2005)}]{TerBraak2005}
+{Ter Braak}, C.~J.~F. 2005, Wageningen UR, Biometris, 010404, 556
 
 \bibitem[{{Tucci Maia} {et~al.}(2016){Tucci Maia}, {Ram{\'{\i}}rez},
   {Mel{\'e}ndez}, {Bedell}, {Bean}, \& {Asplund}}]{TucciMaia2016}

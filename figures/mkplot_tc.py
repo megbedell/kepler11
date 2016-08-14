@@ -47,6 +47,38 @@ if __name__ == "__main__":
     abund_gce = np.delete(abund_gce, 7)
     err_gce = np.delete(err_gce, 7)
     
+    '''
+    parinfo = [{'value':0., 'fixed':0, 'limited':[0,0], 'limits':[0.,0.]} for i in range(2)]
+    parinfo[0]['value'] = 2.0e-5
+    parinfo[1]['value'] = 6.0e-2
+    parinfo[0]['step'] = 1.0e-6
+    parinfo[1]['step'] = 5.0e-3
+
+    fa = {'x':Tc, 'y':abund_gce, 'err':err_gce}
+    m = mpfit.mpfit(linear, parinfo=parinfo, functkw=fa)
+    print 'status = ', m.status
+    if (m.status <= 0): print 'error message = ', m.errmsg
+    print 'parameters = ', m.params
+    print 'uncertainties = ', m.perror
+
+    parinfo = [{'value':0., 'fixed':0, 'limited':[0,0], 'limits':[0.,0.]} for i in range(3)]
+    parinfo[0]['value'] = 1.0e-4
+    parinfo[1]['value'] = 3.0e-2
+    parinfo[2]['value'] = 800.0
+    parinfo[0]['step'] = 1.0e-6
+    parinfo[1]['step'] = 5.0e-3
+    parinfo[2]['step'] = 10.0
+    parinfo[2]['limited'] = [1,1]
+    parinfo[2]['limits'] = [0.0, 1800.0]
+
+    fa = {'x':Tc, 'y':abund_gce, 'err':err}
+    m = mpfit.mpfit(linbreak, parinfo=parinfo, functkw=fa)
+    print 'status = ', m.status
+    if (m.status <= 0): print 'error message = ', m.errmsg
+    print 'parameters = ', m.params
+    print 'uncertainties = ', m.perror
+    '''
+
     matplotlib.rcParams['xtick.labelsize'] = 20
     matplotlib.rcParams['ytick.labelsize'] = 20
 
