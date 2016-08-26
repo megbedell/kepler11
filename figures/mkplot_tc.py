@@ -5,12 +5,11 @@ from matplotlib.ticker import MultipleLocator, FormatStrFormatter
 import matplotlib.gridspec as gridspec
 import numpy as np
 import pdb
+from scipy.optimize import curve_fit
 
-def linear(p, fjac=None, x=None, y=None, err=None):
-     m,b = (p[0],p[1])
+def linear(x, m, b):
      model = m*x + b
-     status = 0
-     return([status, (y-model)/err])
+     return model
 
 def linbreak(p, fjac=None, x=None, y=None, err=None):
      m,offs,bk=(p[0],p[1],p[2])
@@ -46,6 +45,8 @@ if __name__ == "__main__":
     err = np.delete(err, 7)
     abund_gce = np.delete(abund_gce, 7)
     err_gce = np.delete(err_gce, 7)
+    
+    ages, slopes, intercepts = np.loadtxt('../data/Tc_fits.txt', unpack=True)
     
     '''
     parinfo = [{'value':0., 'fixed':0, 'limited':[0,0], 'limits':[0.,0.]} for i in range(2)]
@@ -96,15 +97,17 @@ if __name__ == "__main__":
     ax.xaxis.set_minor_locator(minorLocator)
     ax.xaxis.set_major_locator(majorLocator)
     ax.set_xlim([0,1800])
+    x_all = np.arange(1800)*1.0
+    for i in range(len(ages)):
+        plt.plot(x_all, linear(x_all, slopes[i], intercepts[i]), color=c2, linewidth=2, alpha=0.5)
     plt.errorbar(Tc,abund,yerr=err,color=c1,mec=c1,fmt='o',markersize=10)
     plt.errorbar(Tc,abund_gce,yerr=err_gce,color=c2,mec=c2,fmt='o',markersize=10)
-    x_all = np.arange(1800)*1.0
-    slope,offs,bk= (9.48695845e-06,   4.97951530e-02,   0.00000000e+00)
-    plt.plot(x_all, np.piecewise(x_all,[x_all<bk,x_all>=bk],[offs,lambda x_all: (offs + slope*(x_all - bk))]), color=c1, linewidth=2)
-    slope,offs,bk=(4.29898056e-05,   1.95984843e-02,   7.26000003e+02)
-    plt.plot(x_all, np.piecewise(x_all,[x_all<bk,x_all>=bk],[offs,lambda x_all: (offs + slope*(x_all - bk))]), color=c2, linewidth=2)
+    popt, pcov = curve_fit(linear, Tc, abund, sigma=err, absolute_sigma=True)
+    plt.plot(x_all, linear(x_all, popt[0], popt[1]), color=c1, linewidth=2)
+    popt, pcov = curve_fit(linear, Tc, abund_gce, sigma=err_gce, absolute_sigma=True)
+    plt.plot(x_all, linear(x_all, popt[0], popt[1]), color=c2, linewidth=2)
     plt.xlabel(r'$T_c$ (K)', fontsize=26)
     plt.ylabel('[X/H]', fontsize=26)
     
-    fig.savefig('K11_Tc_break.pdf')
+    fig.savefig('K11_Tc_linear.pdf')
     
