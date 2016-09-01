@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import curve_fit
 import pdb
+import pickle
 
 def linear(x, m, b):
      model = m*x + b
@@ -18,22 +19,17 @@ if __name__ == "__main__":
     sun.get_data_from(data)
     K11 = q2.Star("K11")
     K11.get_data_from(data)
-    K11.get_model_atmosphere('odfnew')
     sun.get_model_atmosphere('odfnew')
     
-    sp = q2.specpars.SolvePars()
-    sp.step_teff = 4
-    sp.step_logg = 0.04
-    sp.step_vt = 0.04
-    sp.niter = 100
-    sp.grid = 'odfnew'
-    sp.errors = True
-    q2.specpars.solve_one(K11, sp, Ref=sun)
-
-    q2.abundances.one(K11, Ref=sun, silent=False, errors=False)
+    # load up the posteriors and get abundances / Tc trend for the best fit solution
+    post = pickle.load(open('chainresults_K11-Sun.p','rb'))
+    K11.teff = np.median(post[:,:,0])
+    
+    K11.get_model_atmosphere('odfnew')
+    q2.abundances.one(K11, Ref=sun, silent=True, errors=False)
     sp = q2.isopars.SolvePars(key_parameter_known='logg', db='yy02.sql3', feh_offset = 0)
     pp = q2.isopars.PlotPars(make_figures=False)
-    q2.isopars.solve_one(K11, sp, PlotPars=pp)
+    q2.isopars.solve_one(K11, sp, PlotPars=pp, silent=True)
     
     species_codes = sorted(set(K11.linelist['species']))
     species_ids = q2.abundances.getsp_ids(species_codes)

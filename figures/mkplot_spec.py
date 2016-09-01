@@ -36,8 +36,8 @@ HD10145_wave = crval1 + np.arange(naxis1)*cdelt1
 HD10145_flux = sp[0].data"""
 
 #set up the figure
-matplotlib.rcParams['xtick.labelsize'] = 20
-matplotlib.rcParams['ytick.labelsize'] = 20
+#matplotlib.rcParams['xtick.labelsize'] = 20
+#matplotlib.rcParams['ytick.labelsize'] = 20
 
 fig = plt.figure()
 gs = gridspec.GridSpec(2,1,height_ratios=[4,1],hspace=0.1)

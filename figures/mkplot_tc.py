@@ -98,8 +98,8 @@ if __name__ == "__main__":
     ax.xaxis.set_major_locator(majorLocator)
     ax.set_xlim([0,1800])
     x_all = np.arange(1800)*1.0
-    for i in range(len(ages)):
-        plt.plot(x_all, linear(x_all, slopes[i], intercepts[i]), color=c2, linewidth=2, alpha=0.5)
+    #for i in range(len(ages)):
+    #    plt.plot(x_all, linear(x_all, slopes[i], intercepts[i]), color=c2, linewidth=2, alpha=0.5)
     plt.errorbar(Tc,abund,yerr=err,color=c1,mec=c1,fmt='o',markersize=10)
     plt.errorbar(Tc,abund_gce,yerr=err_gce,color=c2,mec=c2,fmt='o',markersize=10)
     popt, pcov = curve_fit(linear, Tc, abund, sigma=err, absolute_sigma=True)
