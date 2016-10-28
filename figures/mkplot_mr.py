@@ -42,6 +42,12 @@ for planet in oec.findall(".//planet[mass]"):
     radius_errm = np.append(radius_errm, float(rem))
     radius_errp = np.append(radius_errp, float(rep))
 
+'''    
+save_cat =  np.transpose(np.asarray([name, mass, mass_errm, mass_errp, radius, \
+            radius_errm, radius_errp]))
+np.savetxt('mr_from_oec.csv', save_cat, \
+            delimiter=',', fmt='%s', header='name, mass, mass_errm, mass_errp, radius, radius_errm, radius_errp')
+'''      
 
 models = readsav('structure_models.dat')
 
