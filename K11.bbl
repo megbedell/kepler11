@@ -33,10 +33,16 @@
 {dos Santos}, L.~A., {Mel{\'e}ndez}, J., {do Nascimento}, Jr., J.-D., {et~al.}
   2016, \aap, arXiv:1606.06214
 
+\bibitem[{{Duncan}(1981)}]{Duncan1981}
+{Duncan}, D.~K. 1981, \apj, 248, 651
+
 \bibitem[{Epstein {et~al.}(2010)Epstein, Johnson, Dong, Udalski, Gould, \&
   Becker}]{Epstein2010}
 Epstein, C.~R., Johnson, J.~a., Dong, S., {et~al.} 2010, The Astrophysical
   Journal, 709, 447
+
+\bibitem[{{Gaidos}(2015)}]{Gaidos2015}
+{Gaidos}, E. 2015, \apj, 804, 40
 
 \bibitem[{{Hall} {et~al.}(2009){Hall}, {Henry}, {Lockwood}, {Skiff}, \&
   {Saar}}]{Hall2009}
@@ -46,6 +52,12 @@ Epstein, C.~R., Johnson, J.~a., Dong, S., {et~al.} 2010, The Astrophysical
 \bibitem[{{Hands} {et~al.}(2014){Hands}, {Alexander}, \& {Dehnen}}]{Hands2014}
 {Hands}, T.~O., {Alexander}, R.~D., \& {Dehnen}, W. 2014, \mnras, 445, 749
 
+\bibitem[{{Hinkel} {et~al.}(2016){Hinkel}, {Young}, {Pagano}, {Desch}, {Anbar},
+  {Adibekyan}, {Blanco-Cuaresma}, {Carlberg}, {Delgado Mena}, {Liu},
+  {Nordlander}, {Sousa}, {Korn}, {Gruyters}, {Heiter}, {Jofr{\'e}}, {Santos},
+  \& {Soubiran}}]{Hinkel2016}
+{Hinkel}, N.~R., {Young}, P.~A., {Pagano}, M.~D., {et~al.} 2016, \apjs, 226, 4
+
 \bibitem[{{Howe} \& {Burrows}(2015)}]{Howe2015}
 {Howe}, A.~R., \& {Burrows}, A. 2015, \apj, 808, 150
 
@@ -54,6 +66,9 @@ Epstein, C.~R., Johnson, J.~a., Dong, S., {et~al.} 2010, The Astrophysical
 
 \bibitem[{{Kipping}(2014)}]{Kipping2014}
 {Kipping}, D.~M. 2014, \mnras, 440, 2164
+
+\bibitem[{{Lee} {et~al.}(2014){Lee}, {Chiang}, \& {Ormel}}]{Lee2014}
+{Lee}, E.~J., {Chiang}, E., \& {Ormel}, C.~W. 2014, \apj, 797, 95
 
 \bibitem[{{Lissauer} {et~al.}(2011){Lissauer}, {Fabrycky}, {Ford}, {Borucki},
   {Fressin}, {Marcy}, {Orosz}, {Rowe}, {Torres}, {Welsh}, {Batalha}, {Bryson},
@@ -92,6 +107,10 @@ Epstein, C.~R., Johnson, J.~a., Dong, S., {et~al.} 2010, The Astrophysical
 {Mel{\'e}ndez}, J., {Bergemann}, M., {Cohen}, J.~G., {et~al.} 2012, \aap, 543,
   A29
 
+\bibitem[{{Meunier} {et~al.}(2010){Meunier}, {Desort}, \&
+  {Lagrange}}]{Meunier2010}
+{Meunier}, N., {Desort}, M., \& {Lagrange}, A.-M. 2010, \aap, 512, A39
+
 \bibitem[{{Migaszewski} {et~al.}(2012){Migaszewski}, {S{\l}onina}, \&
   {Go{\'z}dziewski}}]{Migaszewski2012}
 {Migaszewski}, C., {S{\l}onina}, M., \& {Go{\'z}dziewski}, K. 2012, \mnras,
@@ -104,8 +123,17 @@ Epstein, C.~R., Johnson, J.~a., Dong, S., {et~al.} 2010, The Astrophysical
 \bibitem[{{Nissen}(2015)}]{Nissen2015}
 {Nissen}, P.~E. 2015, \aap, 579, A52
 
+\bibitem[{{Oshagh} {et~al.}(2014){Oshagh}, {Santos}, {Ehrenreich},
+  {Haghighipour}, {Figueira}, {Santerne}, \& {Montalto}}]{Oshagh2014}
+{Oshagh}, M., {Santos}, N.~C., {Ehrenreich}, D., {et~al.} 2014, \aap, 568, A99
+
 \bibitem[{{P{\'a}l}(2012)}]{2012MNRAS.420.1630P}
 {P{\'a}l}, A. 2012, \mnras, 420, 1630
+
+\bibitem[{{Radick} {et~al.}(1998){Radick}, {Lockwood}, {Skiff}, \&
+  {Baliunas}}]{Radick1998}
+{Radick}, R.~R., {Lockwood}, G.~W., {Skiff}, B.~A., \& {Baliunas}, S.~L. 1998,
+  \apjs, 118, 239
 
 \bibitem[{{Ram{\'{\i}}rez} {et~al.}(2014){Ram{\'{\i}}rez}, {Mel{\'e}ndez},
   {Bean}, {Asplund}, {Bedell}, {Monroe}, {Casagrande}, {Schirbel}, {Dreizler},
@@ -139,6 +167,10 @@ Epstein, C.~R., Johnson, J.~a., Dong, S., {et~al.} 2010, The Astrophysical
 \bibitem[{{Ter Braak}(2005)}]{TerBraak2005}
 {Ter Braak}, C.~J.~F. 2005, Wageningen UR, Biometris, 010404, 556
 
+\bibitem[{{Teske} {et~al.}(2015){Teske}, {Ghezzi}, {Cunha}, {Smith}, {Schuler},
+  \& {Bergemann}}]{Teske2015}
+{Teske}, J.~K., {Ghezzi}, L., {Cunha}, K., {et~al.} 2015, \apjl, 801, L10
+
 \bibitem[{{Tucci Maia} {et~al.}(2016){Tucci Maia}, {Ram{\'{\i}}rez},
   {Mel{\'e}ndez}, {Bedell}, {Bean}, \& {Asplund}}]{TucciMaia2016}
 {Tucci Maia}, M., {Ram{\'{\i}}rez}, I., {Mel{\'e}ndez}, J., {et~al.} 2016,
@@ -150,5 +182,8 @@ Epstein, C.~R., Johnson, J.~a., Dong, S., {et~al.} 2010, The Astrophysical
 \bibitem[{{Wang} {et~al.}(2015){Wang}, {Fischer}, {Horch}, \& {Xie}}]{Wang2015}
 {Wang}, J., {Fischer}, D.~A., {Horch}, E.~P., \& {Xie}, J.-W. 2015, \apj, 806,
   248
+
+\bibitem[{{Weiss} \& {Marcy}(2014)}]{Weiss2014}
+{Weiss}, L.~M., \& {Marcy}, G.~W. 2014, \apjl, 783, L6
 
 \end{thebibliography}

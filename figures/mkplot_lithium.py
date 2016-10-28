@@ -40,4 +40,8 @@ ax.set_ylabel(r'Normalized Flux',size=28)
 ax.set_xlabel(r'Wavelength ($\AA$)',size=28)
 ax.legend(loc='lower right',prop={'size':24})
 
+plt.text(6707.75,1.0,'Li I',ha='center',size=28)
+plt.plot(np.zeros(5)+6707.75, np.linspace(0.994,0.997,num=5), color=c1, lw=3)
+
+
 plt.savefig('lithium.pdf')

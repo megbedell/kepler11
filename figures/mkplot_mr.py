@@ -76,7 +76,7 @@ K11_r_ttv = np.asarray([1.8,2.87,3.12,4.19,2.49])
 K11_rupper = np.asarray([.03,.05,.06,.07,.04])
 K11_rlower = np.asarray([.05,.06,.07,.09,.07])
 K11_mass_spec = K11_mass_ttv * 1.04/0.961
-K11_r_spec = K11_r_ttv * 1.00/1.065
+K11_r_spec = K11_r_ttv * 1.008/1.065
 
 c1 = '#003399'
 c2 = '#CC0033'
