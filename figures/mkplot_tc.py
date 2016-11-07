@@ -19,7 +19,7 @@ def linbreak(p, fjac=None, x=None, y=None, err=None):
 
 if __name__ == "__main__":
     
-    data = q2.Data("../data/K11_solution.csv","../data/K11_lines.csv")
+    data = q2.Data("../data/solution_4step.csv","../data/K11_lines.csv")
     sun = q2.Star("Sun")
     sun.get_data_from(data)
     K11 = q2.Star("K11")
@@ -27,14 +27,14 @@ if __name__ == "__main__":
     K11.get_model_atmosphere('odfnew')
     sun.get_model_atmosphere('odfnew')
 
-    sp = q2.specpars.SolvePars()
-    sp.step_teff = 4
-    sp.step_logg = 0.04
-    sp.step_vt = 0.04
-    sp.niter = 100
-    sp.grid = 'odfnew'
-    sp.errors = True
-    q2.specpars.solve_one(K11, sp, Ref=sun)
+    #sp = q2.specpars.SolvePars()
+    #sp.step_teff = 4
+    #sp.step_logg = 0.04
+    #sp.step_vt = 0.04
+    #sp.niter = 100
+    #sp.grid = 'odfnew'
+    #sp.errors = True
+    #q2.specpars.solve_one(K11, sp, Ref=sun)
     q2.abundances.one(K11, Ref=sun, silent=True, errors=False)
 
     abund_linear, err, Tc = q2.gce.correct(K11, age=2.7, method='linear', silent=False)
@@ -71,8 +71,8 @@ if __name__ == "__main__":
     int_med = np.median(intercepts)
     int_hi = np.percentile(intercepts,84)
     
-    plt.fill_between(x_all,linear(x_all, slope_lo, int_lo), linear(x_all, slope_hi, int_hi),\
-        color=c1,alpha=0.2) # ASSUMES PERFECT COVARIANCE
+    plt.fill_between(x_all,linear(x_all, slope_hi, int_lo), linear(x_all, slope_lo, int_hi),\
+        color=c1,alpha=0.2) # ASSUMES PERFECT ANTI-CORRELATION
 
     plt.errorbar(Tc,abund_linear,yerr=err,color=c1,mec=c1,fmt='o',markersize=10)
     plt.plot(x_all, linear(x_all, slope_med, int_med), color=c1, linewidth=2)

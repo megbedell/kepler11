@@ -24,14 +24,21 @@
 \bibitem[{{Bodenheimer} \& {Lissauer}(2014)}]{Bodenheimer2014}
 {Bodenheimer}, P., \& {Lissauer}, J.~J. 2014, \apj, 791, 103
 
+\bibitem[{{Carlos} {et~al.}(2016){Carlos}, {Nissen}, \&
+  {Mel{\'e}ndez}}]{Carlos2016}
+{Carlos}, M., {Nissen}, P.~E., \& {Mel{\'e}ndez}, J. 2016, \aap, 587, A100
+
 \bibitem[{{Chambers}(2010)}]{Chambers2010}
 {Chambers}, J.~E. 2010, \apj, 724, 92
+
+\bibitem[{{Chiang} \& {Laughlin}(2013)}]{Chiang2013}
+{Chiang}, E., \& {Laughlin}, G. 2013, \mnras, 431, 3444
 
 \bibitem[{{dos Santos} {et~al.}(2016){dos Santos}, {Mel{\'e}ndez}, {do
   Nascimento}, {Bedell}, {Ram{\'{\i}}rez}, {Bean}, {Asplund}, {Spina},
   {Dreizler}, {Alves-Brito}, \& {Casagrande}}]{dosSantos2016}
-{dos Santos}, L.~A., {Mel{\'e}ndez}, J., {do Nascimento}, Jr., J.-D., {et~al.}
-  2016, \aap, arXiv:1606.06214
+{dos Santos}, L.~A., {Mel{\'e}ndez}, J., {do Nascimento}, J.-D., {et~al.} 2016,
+  \aap, 592, A156
 
 \bibitem[{{Duncan}(1981)}]{Duncan1981}
 {Duncan}, D.~K. 1981, \apj, 248, 651
@@ -87,6 +94,11 @@ Epstein, C.~R., Johnson, J.~a., Dong, S., {et~al.} 2010, The Astrophysical
   {Welsh}}]{Lissauer2013}
 {Lissauer}, J.~J., {Jontof-Hutter}, D., {Rowe}, J.~F., {et~al.} 2013, \apj,
   770, 131
+
+\bibitem[{{Liu} {et~al.}(2016){Liu}, {Yong}, {Asplund}, {Ram{\'{\i}}rez},
+  {Mel{\'e}ndez}, {Gustafsson}, {Howes}, {Roederer}, {Lambert}, \&
+  {Bensby}}]{Liu2016}
+{Liu}, F., {Yong}, D., {Asplund}, M., {et~al.} 2016, \mnras, 456, 2636
 
 \bibitem[{{Lodders}(2003)}]{Lodders2003}
 {Lodders}, K. 2003, \apj, 591, 1220
@@ -148,6 +160,11 @@ Epstein, C.~R., Johnson, J.~a., Dong, S., {et~al.} 2010, The Astrophysical
   {Still}, {Fortney}, {Gautier}, {Hunter}, {Caldwell}, {Ciardi}, {Devore},
   {Cochran}, {Jenkins}, {Agol}, {Carter}, \& {Geary}}]{Rowe2014}
 {Rowe}, J.~F., {Bryson}, S.~T., {Marcy}, G.~W., {et~al.} 2014, \apj, 784, 45
+
+\bibitem[{{Seager} {et~al.}(2007){Seager}, {Kuchner}, {Hier-Majumder}, \&
+  {Militzer}}]{Seager2007}
+{Seager}, S., {Kuchner}, M., {Hier-Majumder}, C.~A., \& {Militzer}, B. 2007,
+  \apj, 669, 1279
 
 \bibitem[{{Skumanich}(1972)}]{Skumanich1972}
 {Skumanich}, A. 1972, \apj, 171, 565
