@@ -57,6 +57,7 @@ err_scale = np.sqrt((mass_errp + mass_errm)**2/mass**2 + (radius_errp + radius_e
 alphas = np.exp(-err_scale*1.5)
 colors = np.asarray([(0,0,0, alpha) for alpha in alphas])
 
+
 plt.scatter(mass*317.83, radius*11.209, c=colors, edgecolors=colors)
 for ind in np.where(np.isfinite(err_scale))[0]:
     xerr = np.max([mass_errm[ind] * 317.83,mass_errp[ind] * 317.8])
@@ -65,13 +66,13 @@ for ind in np.where(np.isfinite(err_scale))[0]:
 
 
 plt.plot(models.hydrogen_mass, models.hydrogen_radius,ls='--', color='#7A68A6') # purple
-plt.text(4,5.1,r'hydrogen',color='#7A68A6',size=22)
+plt.text(4,5.1,r'H/He',color='#7A68A6',size=22)
 plt.plot(models.water_mass, models.water_radius,ls='--', color='#348ABD') # blue
-plt.text(20.5,3.0,r'water',color='#348ABD',size=22)
+plt.text(20.5,3.0,r'water world',color='#348ABD',size=22)
 plt.plot(models.silicate_mass, models.silicate_radius,ls='--', color='#188487') # turquoise
-plt.text(20.5,2.3,r'silicate',color='#188487',size=22)
+plt.text(20.5,2.3,r'Earth-like',color='#188487',size=22)
 plt.plot(models.iron_mass, models.iron_radius,ls='--', color='#467821') # green
-plt.text(20.5,1.6,r'iron',color='#467821',size=22)
+plt.text(20.5,1.6,r'Mercury-like',color='#467821',size=22)
 
 
 K11_name = np.asarray(['K-11 b','K-11 c','K-11 d','K-11 e','K-11 f'])
@@ -97,10 +98,13 @@ plt.ylabel(r'Radius ($R_{\oplus}$)', size=24)
 plt.xscale('log')
 plt.xlim(0.5,20.0) 
 plt.ylim(0.0,5.0) 
+#x0, x1, y0, y1 = plt.axis()
+#plot_margin = 0.4
+#plt.axis((x0 - plot_margin, x1 + plot_margin,y0,y1))
 ax = plt.gca()
 majorFormatter = FormatStrFormatter('%d')
 ax.xaxis.set_major_formatter(majorFormatter)
 
-plt.legend(loc='upper left',prop={'size':24})
+plt.legend(numpoints=1,loc='upper left',prop={'size':24})
 
-plt.savefig('K11_massradius.pdf')
+plt.savefig('K11_massradius.pdf',bbox_inches='tight')
