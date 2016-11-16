@@ -14,6 +14,8 @@ spec_wave, spec = np.loadtxt(spec_file, unpack=True)
 sun_wave, sun_spec = np.loadtxt(sun_file, unpack=True)
 synth_wave, synth = np.loadtxt(synth_file, unpack=True, skiprows=2)
 synth_wave, sun_synth = np.loadtxt(sun_synth_file, unpack=True, skiprows=2)
+wave_factor = 0.003 # wavelength shift = second-to-last number on second-to-last line of synth pars
+c_factor = 1.0205 # continuum factor = last number on second-to-last line of synth pars
 
 c1 = 'black'
 c2 = '#003399' # blue
@@ -33,9 +35,9 @@ majorLocator = MultipleLocator(1.0)
 minorLocator = MultipleLocator(0.1)
 ax.xaxis.set_minor_locator(minorLocator)
 ax.xaxis.set_major_locator(majorLocator)
-plt.scatter(spec_wave, spec+0.018, color=c1, label=r'Kepler-11')
-plt.plot(synth_wave, sun_synth, color=c2, lw=2, label=r'A(Li)$_{\odot}$ = +1.11')
-plt.plot(synth_wave, synth, color=c3, lw=2, label=r'A(Li) = +1.26')
+plt.scatter(spec_wave+wave_factor, spec*c_factor, color=c1, label=r'Kepler-11')
+plt.plot(synth_wave, sun_synth, color=c2, lw=2, label=r'A(Li)$_{\odot}$ = +1.03')
+plt.plot(synth_wave, synth, color=c3, lw=2, label=r'A(Li) = +1.28')
 ax.set_ylabel(r'Normalized Flux',size=28)
 ax.set_xlabel(r'Wavelength ($\AA$)',size=28)
 ax.legend(loc='lower right',prop={'size':24})

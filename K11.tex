@@ -1,8 +1,10 @@
-\documentclass[oneside]{emulateapj}
+%\documentclass[oneside]{emulateapj}
+\documentclass[twocolumn]{aastex61}
+
 \usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
 								% TeX will automatically convert eps --> pdf in pdflatex	
 \usepackage{xcolor}
-\usepackage{hyperref}	
+%\usepackage{hyperref}	
 \usepackage[sort&compress]{natbib}
 \usepackage[hang,flushmargin]{footmisc}
 \usepackage[counterclockwise]{rotating}
@@ -18,28 +20,43 @@
 
 \title{Kepler-11 is a Solar Twin: Revising the Masses and Radii of Benchmark Planets Via Precise Stellar Characterization}
 
-\author{Megan Bedell\altaffilmark{1},
-Jacob L. Bean\altaffilmark{1},
-Jorge Mel\'{e}ndez\altaffilmark{2},
-Sean M. Mills\altaffilmark{1},
-Daniel C. Fabrycky\altaffilmark{1},
-Fabr\'{i}cio C. Freitas\altaffilmark{2},
-Ivan Ram\'{i}rez\altaffilmark{3},
-Martin Asplund\altaffilmark{4},
-Fan Liu\altaffilmark{4,5},
-David Yong\altaffilmark{4}}
+\author{Megan Bedell}
+\affiliation{Department of Astronomy and Astrophysics, University of Chicago, 5640 S. Ellis Ave, Chicago, IL 60637, USA}
 
+\author{Jacob L. Bean}
+\affiliation{Department of Astronomy and Astrophysics, University of Chicago, 5640 S. Ellis Ave, Chicago, IL 60637, USA}
+
+\author{Jorge Mel\'{e}ndez}
+\affiliation{Departamento de Astronomia do IAG/USP, Universidade de
+S\~{a}o Paulo, Rua do Mat\~{a}o 1226, Cidade Universit\'{a}ria, 05508-900 S\~{a}o Paulo, SP, Brazil}
+
+\author{Sean M. Mills}
+\affiliation{Department of Astronomy and Astrophysics, University of Chicago, 5640 S. Ellis Ave, Chicago, IL 60637, USA}
+
+\author{Daniel C. Fabrycky}
+\affiliation{Department of Astronomy and Astrophysics, University of Chicago, 5640 S. Ellis Ave, Chicago, IL 60637, USA}
+
+\author{Fabr\'{i}cio C. Freitas}
+\affiliation{Departamento de Astronomia do IAG/USP, Universidade de
+S\~{a}o Paulo, Rua do Mat\~{a}o 1226, Cidade Universit\'{a}ria, 05508-900 S\~{a}o Paulo, SP, Brazil}
+
+\author{Ivan Ram\'{i}rez}
+\affiliation{McDonald Observatory and Department of Astronomy, University of Texas at Austin, USA}
+
+\author{Martin Asplund}
+\affiliation{Research School of Astronomy and Astrophysics, Australian National University, Canberra, ACT 2611, Australia}
+
+\author{Fan Liu}
+\affiliation{Research School of Astronomy and Astrophysics, Australian National University, Canberra, ACT 2611, Australia}
+\affiliation{Lund Observatory, Department of Astronomy and Theoretical physics, Lund University, Box 43, SE-22100 Lund, Sweden}
+
+\author{David Yong}
+\affiliation{Research School of Astronomy and Astrophysics, Australian National University, Canberra, ACT 2611, Australia}
+
+\correspondingauthor{Megan Bedell}
 \email{E-mail: mbedell@oddjob.uchicago.edu}
 
-\altaffiltext{1}{Department of Astronomy and Astrophysics, University of Chicago, 5640 S. Ellis Ave, Chicago, IL 60637, USA}
-\altaffiltext{2}{Departamento de Astronomia do IAG/USP, Universidade de
-S\~{a}o Paulo, Rua do Mat\~{a}o 1226, Cidade Universit\'{a}ria, 05508-900 S\~{a}o Paulo, SP, Brazil}
-\altaffiltext{3}{McDonald Observatory and Department of Astronomy, University of Texas at Austin, USA}
-\altaffiltext{4}{Research School of Astronomy and Astrophysics, Australian National University, Canberra, ACT 2611, Australia}
-\altaffiltext{5}{Lund Observatory, Department of Astronomy and Theoretical physics, Lund University, Box 43, SE-22100 Lund, Sweden}
-
-
-\keywords{stars: abundances, stars: fundamental parameters, techniques: spectroscopic}
+\keywords{stars: abundances, stars: fundamental parameters, techniques: spectroscopic, planets and satellites: fundamental parameters}
 
 \begin{abstract}
 
@@ -51,7 +68,7 @@ The six planets of the Kepler-11 system are the archetypal example of a populati
 
 Five years after their initial discovery, the six planets of the Kepler-11 system remain a crown jewel of \Kepler science results \citep[][hereafter L11]{Lissauer2011}. All six planets orbit a Sun-like host star with low eccentricies in a largely co-planar, tightly packed configuration. The formation and long-term stability of the system remains an open question \citep[see e.g.][]{Ikoma2012, Hands2014, Mahajan2014}. Kepler-11 is regarded as the prototypical example of a system of tightly-packed inner planets, a class of \Kepler multi-planet systems which offers a surprising counterpoint to our own solar system's more widely spaced architecture. Given the low geometric probability of finding a six-planet transiting system, Kepler-11 is a valuable and rare opportunity to study in detail a potentially common population of exoplanets.
 
-In addition to their unusually tight system architecture, the Kepler-11 planets are noteworthy in another sense: their measured masses and radii place them among the lowest-density super-Earths known to date. Transit timing variations (TTVs) have been measured for all six planets. In the discovery paper,  L11 derived mass constraints for the five inner planets based on TTVs from six quarters of \Kepler data. \citet{Migaszewski2012} reanalyzed the same data using a photodynamical model and found similar results, with an additional constraint on the outermost planet's mass. The system was later revisited by \citet[][hereafter L13]{Lissauer2013} using fourteen quarters of \Kepler data. All three analyses estimate mean densities of $\leq$ 0.5 $\rho_{\earth}$ for all planets in the system, implying a considerable gas envelope on even the smaller super-Earths. This result has implications for potential formation scenarios, with the viability of forming such low-density planets on short orbits in situ up for debate \citep[e.g.][]{Lopez2012, Chiang2013, Bodenheimer2014, Howe2015}.
+In addition to their unusually tight system architecture, the Kepler-11 planets are noteworthy in another sense: their measured masses and radii place them among the lowest-density super-Earths known to date. Transit timing variations (TTVs) have been measured for all six planets. In the discovery paper,  L11 derived mass constraints for the five inner planets based on TTVs from six quarters of \Kepler data. \citet{Migaszewski2012} reanalyzed the same data using a photodynamical model and found similar results, with an additional constraint on the outermost planet's mass. The system was later revisited by \citet[][hereafter L13]{Lissauer2013} using fourteen quarters of \Kepler data. All three analyses estimate mean densities of $\leq$ 0.5 $\rho_{\earth}$ for all the planets in the system, implying a considerable gas envelope on even the smaller super-Earths. This result has implications for potential formation scenarios, with the viability of forming such low-density planets on short orbits in situ up for debate \citep[e.g.][]{Lopez2012, Chiang2013, Bodenheimer2014, Howe2015}.
 
 Mean planet densities derived from transits and TTVs (or from transits and radial velocities) have a strong dependence on the assumed properties of the host star. Since the transit depth observationally constrains the ratio of planetary radius to stellar radius, the planet volume depends on the assumed stellar radius to the third power. The planet mass found from TTV inversion is correlated with the stellar mass. Host star characterization is therefore a critical part of measuring planet densities.
 
@@ -61,19 +78,53 @@ Kepler-11's well-characterized planetary system makes it a prime target for more
 
 The data are presented in Section \ref{s:data}. Derivation of the fundamental stellar properties from the spectrum is presented in Sections \ref{s:characterization} and \ref{s:ages}, and photospheric abundances are found in Section \ref{s:abundances}. We then present a new analysis of the \Kepler lightcurve using a photodynamical model in Section \ref{s:ttvs}. Finally, we compare the results from the spectroscopic and transit-based methods and discuss implications for the planetary system in Section \ref{s:discussion}.
 
+\begin{table*}[ht]
+\caption{Summary of derived fundamental stellar properties.}
+\label{tbl:param}
+\centering 
+\begin{tabular}{l|cccccccc} 
+\hline    
+\hline 
+{Spectrum}& \teff & $\sigma_{T}$ & \logg & $\sigma_{logg}$ & $v_t$ & $\sigma_{v_t}$ & \feh & $\sigma_{[Fe/H]}$ \\
+{}               & (K)           & (K)                 & (dex)     & (dex)                   & (\kms) & (\kms) & (dex) & (dex)  \\
+\hline
+Sun (Ceres) \tablenotemark{1} & 5777 &  & 4.44 &  & 0.97 &   & 0.0 & \\
+K11 & 5836 & 7 & 4.44 & 0.02 & 0.98 & 0.02 & 0.062 & 0.007 \\
+HD1178 & 5650 & 7 & 4.36 & 0.02 & 0.93 & 0.02 & 0.013 & 0.008 \\
+HD10145 & 5637 & 16 & 4.39 & 0.05 & 0.87 & 0.04 & $-$0.016 & 0.017 \\
+HD16623 & 5791 & 26 & 4.37 & 0.07 & 0.97 & 0.06 & $-$0.462 & 0.022 \\
+HD20329 & 5606 & 7 & 4.38 & 0.02 & 0.88 & 0.02 & $-$0.094 & 0.008 \\
+HD21727 & 5618 & 20 & 4.40 & 0.07 & 0.90 & 0.05 & 0.005 & 0.017 \\
+HD21774 & 5756 & 29 & 4.32 & 0.07 & 0.98 & 0.06 & 0.252 & 0.026 \\
+HD28474 & 5751 & 17 & 4.47 & 0.06 & 0.93 & 0.05 & $-$0.614 & 0.014 \\
+HD176733 & 5609 & 9 & 4.41 & 0.03 & 0.87 & 0.02 & $-$0.018 & 0.007 \\
+HD191069 & 5729 & 30 & 4.29 & 0.09 & 1.01 & 0.07 & $-$0.033 & 0.025 \\
+\hline       
+\multicolumn{4}{l}{%
+  \begin{minipage}{5.5cm}%
+    \tablenotetext{1}{Used as reference star.}%
+  \end{minipage}%
+}\\
+\end{tabular}
+\end{table*}
 
 \section{Data}
 \label{s:data}
 
-Owing to its relative faintness (V = 14.2, L11), Kepler-11 was previously observed only at a signal-to-noise ratio insufficient for high-precision spectroscopic characterization. We dedicated nearly 8 hours of NASA-awarded Keck I time to obtaining a higher quality spectrum. Over the course of two consecutive nights (July 26-27 2015), we made 22 1200-s exposures of Kepler-11 for a co-added result of S/N$\simeq$260 per pixel in the continuum near 600 nm. For these observations, HIRES was used with the B2 slit and kv387 filter, yielding a resolution R$\simeq$67,000 and wavelength coverage between 390 and 830 nm.
+
+Owing to its relative faintness (V = 14.2, L11), previous observations of Kepler-11 were at a signal-to-noise ratio insufficient for high-precision spectroscopic characterization. We dedicated nearly 8 hours of NASA-awarded Keck I time to obtaining a higher quality spectrum. Over the course of two consecutive nights (July 26-27 2015), we made 22 1200-s exposures of Kepler-11 for a co-added result of S/N$\simeq$260 per pixel in the continuum near 600 nm. For these observations, HIRES was used with the B2 slit and kv387 filter, yielding a resolution R$\simeq$67,000 and wavelength coverage between 390 and 830 nm.
 
 We also observed the solar spectrum (via reflection from Ceres) and nine bright potential Kepler-11 twins with the same instrumental setup and similar S/N. The Kepler-11 twins were selected by imposing criteria of 5600 $\leq$ \teff\ $\leq$ 5750 K and 4.2 $\leq$ \logg\ $\leq$ 4.4 dex on databases of previously published stellar parameters \citep{Adibekyan2012, Bensby2014}. Preference was given to stars likely to be thick-disk members with approximately solar metallicity. These criteria were set based on the original spectroscopic analysis of Kepler-11 by L11, who found \teff\ = 5680 $\pm$ 100 K, \logg\ = 4.3 $\pm$ 0.2 dex, \feh = 0.0 $\pm$ 0.1 dex, and a significant chance of Kepler-11's being a thick disk member based on its kinematics.
 
 The spectral extraction was performed by the Mauna Kea Echelle Extraction (MAKEE) pipeline.\footnote{\url{
 http://www.astro.caltech.edu/~tb/makee/}} All Kepler-11 spectra were then co-added using IRAF's \textit{scombine}.\footnote{IRAF is distributed by the National Optical Astronomy Observatory, which is operated by the Association of Universities for Research in Astronomy (AURA) under cooperative agreement with the National Science Foundation.} Continuum normalization was done by fitting low-order polynomial functions to each order, with care to use the same functional order for a given spectral order on every stellar spectrum to avoid bias in the subsequent differential analysis. Doppler corrections were applied using IRAF's \textit{dopcor} task.
 
+
+
 \section{Stellar Properties from Spectroscopic Analysis}
 \label{s:characterization}
+
+
 
 The fundamental properties of Kepler-11 and its potential twins were derived from an equivalent width analysis. We manually measured 94 Fe I and 17 Fe II spectral lines using IRAF's \textit{splot}. The line list used unblended and unsaturated iron lines adapted from previous works such as \citet{Ramirez2014}. Laboratory values for transition probability were adopted where available, but for this strictly differential analysis the values of log \textit{gf} are largely irrelevant, since they cancel out for all lines in the linear region of the curve-of-growth. Equivalent widths were measured by carefully choosing local continua as described in \citet{Bedell2014} to maximize differential precision between the spectra. The full line list and measured equivalent widths are available in Table \ref{tbl:ews}.
 
@@ -94,35 +145,6 @@ We used stellar evolutionary models to estimate the mass, radius, and age of Kep
 \label{fig:spec}
 \end{figure}
 
-\begin{table*}
-\caption{Summary of derived fundamental stellar properties.}
-\label{tbl:param}
-\centering 
-\begin{tabular}{l|cccccccc} 
-\hline    
-\hline 
-{Spectrum}& \teff & $\sigma_{T}$ & \logg & $\sigma_{logg}$ & $v_t$ & $\sigma_{v_t}$ & \feh & $\sigma_{[Fe/H]}$ \\
-{}               & (K)           & (K)                 & (dex)     & (dex)                   & (\kms) & (\kms) & (dex) & (dex)  \\
-\hline
-Sun (Ceres) \footnotemark[1] & 5777 &  & 4.44 &  & 0.97 &   & 0.0 & \\
-K11 & 5836 & 7 & 4.44 & 0.02 & 0.98 & 0.02 & 0.062 & 0.007 \\
-HD1178 & 5650 & 7 & 4.36 & 0.02 & 0.93 & 0.02 & 0.013 & 0.008 \\
-HD10145 & 5637 & 16 & 4.39 & 0.05 & 0.87 & 0.04 & $-$0.016 & 0.017 \\
-HD16623 & 5791 & 26 & 4.37 & 0.07 & 0.97 & 0.06 & $-$0.462 & 0.022 \\
-HD20329 & 5606 & 7 & 4.38 & 0.02 & 0.88 & 0.02 & $-$0.094 & 0.008 \\
-HD21727 & 5618 & 20 & 4.40 & 0.07 & 0.90 & 0.05 & 0.005 & 0.017 \\
-HD21774 & 5756 & 29 & 4.32 & 0.07 & 0.98 & 0.06 & 0.252 & 0.026 \\
-HD28474 & 5751 & 17 & 4.47 & 0.06 & 0.93 & 0.05 & $-$0.614 & 0.014 \\
-HD176733 & 5609 & 9 & 4.41 & 0.03 & 0.87 & 0.02 & $-$0.018 & 0.007 \\
-HD191069 & 5729 & 30 & 4.29 & 0.09 & 1.01 & 0.07 & $-$0.033 & 0.025 \\
-\hline       
-\multicolumn{4}{l}{%
-  \begin{minipage}{5.5cm}%
-    \footnotetext[1]{Used as reference star.}%
-  \end{minipage}%
-}\\
-\end{tabular}
-\end{table*}
 
 \begin{figure}
 \centering
@@ -146,7 +168,7 @@ The five lines give a consistent result of \vsini\ = 2.2 $\pm$ 0.2 \kms. Assumin
 \subsection{Lithium Abundance}
 \label{s:lithium}
 
-The lithium abundance of Kepler-11 was measured by synthesizing the Li I 6707.8 \r{A} line with MOOG \textit{synth}. The line list was adopted from \citet{Melendez2012} and includes blends of atomic and molecular lines. We find a lithium abundance of \textit{A}(Li) = 1.26 $\pm$ 0.05, higher than the solar value of 1.11 at the level of 3$\sigma$ (Figure \ref{fig:lithium}). This implies a sub-solar age, since lithium is depleted throughout a star's main-sequence lifetime \citep{Duncan1981}. Using the solar-twin-based lithium-age relation from \citet{Carlos2016} gives an age estimate of about 4 $\pm$ 1 Gyr for Kepler-11.
+The lithium abundance of Kepler-11 was measured by synthesizing the Li I 6707.8 \r{A} line with MOOG \textit{synth}. The line list was adopted from \citet{Melendez2012} and includes blends of atomic and molecular lines. We find a lithium abundance of \textit{A}(Li) = 1.28 $\pm$ 0.07, higher than the measured solar value of 1.03 $\pm$ 0.04 at the level of 3$\sigma$ (Figure \ref{fig:lithium}). After applying NLTE corrections, these values become \textit{A}(Li) = 1.32 $\pm$ 0.07 for Kepler-11 and \textit{A}(Li)$_{\odot}$ = 1.07 $\pm$ 0.04 for the Sun \citep{Lind2009}.\footnote{Data obtained from the INSPECT database, version 1.0 (\url{http://www.inspect-stars.com})} Kepler-11's higher lithium abundance implies a sub-solar age, since lithium is depleted throughout a star's main-sequence lifetime \citep{Duncan1981}. Using the solar-twin-based lithium-age relation from \citet{Carlos2016} gives an age estimate of about 3.5 $\pm$ 1.0 Gyr for Kepler-11.
 
 \begin{figure}
 \centering
@@ -160,6 +182,8 @@ The lithium abundance of Kepler-11 was measured by synthesizing the Li I 6707.8 
 
 Recent works by \citet{Nissen2015} and \citet{TucciMaia2016} have identified the ratio of yttrium to magnesium abundances as an excellent proxy for age in main-sequence Sun-like stars. We measured these abundances as described in Section \ref{s:abundances} and found a [Y/Mg] ratio of 0.04 $\pm$ 0.05 dex. Using the age relation from \citet{TucciMaia2016}, this gives an age of 4.0 $\pm$ 0.7 Gyr.
 
+\vspace{5mm}
+
 \subsection{Chromospheric Emission}
 
 We measured the chromospheric emission level of Kepler-11 using the Ca II H line. Since our spectral coverage cut off around 390 nm at the blue end, it was not possible to obtain a measurement of the standard chromospheric activity index $\log(\mathrm{R'_{HK}})$. Instead, we defined an alternative index \textit{H} as the flux integrated from a 1.3 \r{A} width triangular filter centered on the H line at 3968.47 \r{A}, divided by the continuum integrated with a flat filter of 5 \r{A} width around 3979.8 \r{A}. This measurement of \textit{H} was converted to the standard Mount Wilson $S_{HK}$ using the following equation, which was derived from the literature values of ten Sun-like stars:
@@ -170,20 +194,20 @@ S_{HK} = 0.901 H + 0.033
 
 We find an activity index $\log(\mathrm{R'_{HK}})$ = -4.82. This is slightly higher than the maximum activity level of the solar cycle and suggests a sub-solar age \citep{Skumanich1972}. The activity-age relation for solar twins given in \citet{Freitas2016} yields an age estimate of 1.7 Gyr, although this is quite uncertain since we have measured the activity level at only one epoch and cannot average over the activity cycle.
 
-
-\section{Stellar Abundances}
-\label{s:abundances}
-
-We measured photospheric abundances using the curve-of-growth technique for 20 other elements (excluding lithium, whose synthesis-based abundance determination is discussed in Section \ref{s:lithium}). As with the iron lines, all equivalent widths were measured by hand and line-by-line differential abundances determined with MOOG using $q^2$. The line list was adapted from previous works including \citet{Bedell2014}. For the element K, only one line was available, so it was measured multiple times and the deviation of the results was used as an error estimate; however, this uncertainty may be underestimated due to the line's location near a telluric-contaminated region. Hyperfine structure corrections were applied for Co I, Cu I, Mn I, V I, and Y II following \citet{Melendez2012}. Non-LTE corrections were applied for O I \todo{and K I} using grids from \citet{Ramirez2007} \todo{and \citet{Takeda2002} respectively}. Carbon abundances were measured by a combination of C I and CH lines; we note that the abundances for the two species are in tension at the $\sim$2$\sigma$ level for several of the stars in the sample, indicating that there may be some systematic effects at play. The measured equivalent widths are given in Table \ref{tbl:ews}, and resulting abundances for all stars are in Table \ref{tbl:abund}.  The quoted abundance errors include both the intrinsic scatter of the lines and the uncertainty propagated from errors on the stellar parameters.
-
-In Figure \ref{fig:xh}, we plot the abundances for all stars as a function of their measured metallicity. Thin- or thick-disk membership was assigned based on UVW kinematics using the procedure specified in \citet{Reddy2006}. Kepler-11 follows the abundance trends of the other thin-disk stars well and does not display a notable $\alpha$-element enrichment, despite its potentially thick-disk kinematics.
-
 \begin{figure*}
 \centering
 \includegraphics[scale=0.7]{xh}
 \caption{Measured abundances plotted as a function of metallicity for the full sample. Thin (red circle) and thick (blue circle) disk stars are categorized by their kinematic membership probabilities. Kepler-11 is represented as a black star.}
 \label{fig:xh}
 \end{figure*}
+
+\section{Stellar Abundances}
+\label{s:abundances}
+
+We measured photospheric abundances using the curve-of-growth technique for 20 other elements (excluding lithium, whose synthesis-based abundance determination is discussed in Section \ref{s:lithium}). As with the iron lines, all equivalent widths were measured by hand and line-by-line differential abundances determined with MOOG using $q^2$. The line list was adapted from previous works including \citet{Bedell2014}. For the element K, only one line was available, so it was measured multiple times and the deviation of the results was used as an error estimate; however, this uncertainty may be underestimated due to the line's location near a telluric-contaminated region. Hyperfine structure corrections were applied for Co I, Cu I, Mn I, V I, and Y II following \citet{Melendez2012}. Non-LTE corrections were applied for O I using grids from \citet{Ramirez2007}. Carbon abundances were measured by a combination of C I and CH lines; we note that the abundances for the two species are in tension at the $\sim$2$\sigma$ level for several of the stars in the sample, indicating that there may be some systematic effects at play. The measured equivalent widths are given in Table \ref{tbl:ews}, and resulting abundances for all stars are in Table \ref{tbl:abund}.  The quoted abundance errors include both the intrinsic scatter of the lines and the uncertainty propagated from errors on the stellar parameters.
+
+In Figure \ref{fig:xh}, we plot the abundances for all stars as a function of their measured metallicity. Thin- or thick-disk membership was assigned based on UVW kinematics using the procedure specified in \citet{Reddy2006}. Kepler-11 follows the abundance trends of the other thin-disk stars well and does not display a notable $\alpha$-element enrichment, despite its potentially thick-disk kinematics.
+
 
 Kepler-11's status as a solar twin enables direct comparison of its abundance pattern to that of the Sun and other known solar twins. Of particular interest is the question of trends in elemental abundances with condensation temperature (\tc). As shown by \citet{Melendez2009}, the solar abundance pattern is unusual in its depletion of refractory elements relative to volatiles. This depletion has been interpreted as ``missing'' rocky material that is locked up in the Solar System planets \citep{Chambers2010}. Building up the number of stars with precisely characterized abundance patterns and planetary systems can help to test this possibility.
 
@@ -196,7 +220,7 @@ For this part of the analysis, all measured states of a given element (e.g. CI a
 \label{fig:tc}
 \end{figure*}
 
-We apply corrections for the effects of galactic chemical evolution (GCE), which can change the abundance patterns and \tc\ trends of stars at varying ages \citep{Nissen2015, Spina2016}. We correct each abundance [X/H] using the prescription of \citet{Spina2016b}, who fit hyperbolic relations to [X/H] as a function of stellar age for a sample of solar twins. We then use the corrected abundances and \tc\ values from Table 8 of \citet{Lodders2003} to search for a trend.
+We applied corrections for the effects of galactic chemical evolution (GCE), which can change the abundance patterns and \tc\ trends of stars at varying ages \citep{Nissen2015, Spina2016}. We corrected each abundance [X/H] using the prescription of \citet{Spina2016b}, who fit hyperbolic relations to [X/H] as a function of stellar age for a sample of solar twins. We then used the corrected abundances and \tc\ values from Table 8 of \citet{Lodders2003} to search for a trend.
 
 The uncertainty on the trend of [X/H] with \tc\ was propagated using a bootstrap Monte Carlo method to account for multiple potential sources of error. Each abundance is uncertain due to the intrinsic scatter of abundances derived from different lines. This uncertainty increases when the GCE correction is applied, since the correction coefficients carry some degree of random error. Additionally, the slope of the \tc\ trend can be altered by errors on the fundamental stellar parameters used \citep[as seen in][]{Teske2015} and by the uncertainty on stellar age in the GCE correction. We account for all of these effects by running 10,000 bootstrap trials where the stellar parameters are resampled from their posterior distributions; the resulting abundances are randomized by drawing samples from the multiple measured lines; the age is determined based on the resampled stellar parameters; and the GCE correction is applied using coefficients that have been randomly sampled from the (assumed Gaussian) uncertainties given in \citet{Spina2016b}. The resulting distribution of \tc\ trend fits gives a slope of [X/H] vs \tc\ of $(-4.6^{+7.9}_{-8.7}) \times 10^{-6}$ dex K$^{-1}$ (Figure  \ref{fig:tc}). In short, the trend of Kepler-11's abundances with \tc\ is indistinguishable from the solar pattern, albeit with a large degree of uncertainty due to the many sources of error which come into play when considering GCE effects.
 
@@ -208,11 +232,14 @@ The uncertainty on the trend of [X/H] with \tc\ was propagated using a bootstrap
 \section{Stellar Properties from Photodynamic Transit Analysis}
 \label{s:ttvs}
 
-In order to reassess the stellar density constraint based on the transit data, we performed a photodynamical fit to the full \Kepler short cadence (58.8 second exposure) data set. The model integrates the 7-body Newtonian equations of motions for the central star and six planets, including the light--travel--time effect. When the planets pass between the star and the line of sight, a synthetic light curve is generated \citep{2012MNRAS.420.1630P}, which can then be compared to the data. This approach therefore takes into account all transit-timing variations, simultaneously constraining planet masses, eccentricities, and radii. To prepare the data for fitting, we detrended the data with a cubic polynomial with a 2880 minute (2 day) width every 100 points, and interpolated for points between. We divide the flux by this fit as a baseline to generate our data set of 1746779 points. We additionally multiply the uncertainties given by \Kepler by a factor of 1.115318 so that the reduced $\chi^2$ of a fiducial model was 1.0. This will broaden our posteriors and helps take into account unmodeled noise in the data. To simultaneously generate the posteriors on all of our model parameters, we ran differential evolution Markov chain Monte Carlo \cite[DEMCMC, ][]{TerBraak2005} fits with planetary parameters $\{P,\, T_0,\, e^{1/2} \, \cos(\omega),\, e^{1/2} \, \sin(\omega),\, i,\, \Omega,\, R_\mathrm{p}/R_\star,\, M_\mathrm{p}/M_\star\}$ for all planets, where $P$ is the period, $T_0$ is the mid-transit time, $e$ is eccentricity, $\omega$ is the argument of periapse, $i$ is inclination, $\Omega$ is nodal angle, and $R$ and $M$ are radius and mass, respectively (with subscripts p $=$ b, c, d, e, f, g for the planets and $\star$ for the star). The star had five additional parameters: $\{M_\star,\, R_\star,\, c_1,\, c_2,\, dilute\}$, where $\{c_i\}$ are the two quadratic limb-darkening coefficients and $dilute$ is the amount of dilution from other nearby sources. We use eccentricity vector components scaling as $e^{1/2}$ so that we have flat prior in total $e$, and fix the values of $dilute=0$ since there is no evidence of other nearby stars diluting the lightcurve. We also fix the value of $M_\star$ as transits alone generally only give information about the density of the star, rather than $M_\star$ and $R_\star$ individually. We fix $\Omega = 0$ for all planets because the data are not precise enough to constrain these values \citep{Migaszewski2012}. Additionally, it is extremely unlikely that there are large mutual inclinations among the planets given that we see six transiting planets (L11, Figure 4), five of which are dynamically packed and thus have no misaligned non-transiting planets between them (L11). We use flat priors in all other parameters.
+\subsection{Analysis}
 
-We run two DEMCMCs. One has no constraints on the stellar radius, i.e., allows the transits themselves to completely determine the stellar density, which we will label $\mathcal{NSI}$, for No Spectral Information. The second DEMCMC we run with the stellar mass and radius fixed at the spectroscopically measured values in this study, $M_\star=1.04M_\odot$ and $R_\star=1.00M_\odot$, which we will label $\mathcal{FSP}$, for Fixed Stellar Parameters. The $\mathcal{NSI}$ run produces a lower density star $\rho_\star = 1.191^{+0.043}_{-0.11}$ g cm$^{-3}$ than the fixed value of $\rho_\star = 1.466$ g cm$^{-3}$ in $\mathcal{FSP}$. This indicates that the transit data alone are discrepant with the spectroscopically measured stellar density. Table~\ref{table:den} shows the density results for all bodies for both DEMCMC runs. We note that the densities of planets with no spectral information, $\mathcal{NSI}$, are slightly higher than reported in L13 because that study includes the lower spectroscopically measured stellar density in their final best fits.
+In order to reassess the stellar density constraint based on the transit data, we performed a photodynamical fit to the full \Kepler short cadence (58.8 second exposure) data set. The model integrates the 7-body Newtonian equations of motions for the central star and six planets, including the light--travel--time effect. When the planets pass between the star and the line of sight, a synthetic light curve is generated \citep{2012MNRAS.420.1630P}, which can then be compared to the data. This approach therefore takes into account all transit-timing variations, simultaneously constraining planet masses, eccentricities, and radii. To prepare the data for fitting, we detrended the data with a cubic polynomial with a 2880 minute (2 day) width every 100 points, and interpolated for points between. We divided the flux by this fit as a baseline to generate our data set of 1746779 points. We additionally multiplied the uncertainties given by \Kepler by a factor of 1.115318 so that the reduced $\chi^2$ of a fiducial model was 1.0. This broadens our posteriors and helps take into account unmodeled noise in the data. To simultaneously generate the posteriors on all of our model parameters, we ran differential evolution Markov chain Monte Carlo \cite[DEMCMC, ][]{TerBraak2005} fits with planetary parameters $\{P,\, T_0,\, e^{1/2} \, \cos(\omega),\, e^{1/2} \, \sin(\omega),\, i,\, \Omega,\, R_\mathrm{p}/R_\star,\, M_\mathrm{p}/M_\star\}$ for all planets, where $P$ is the period, $T_0$ is the mid-transit time, $e$ is eccentricity, $\omega$ is the argument of periapse, $i$ is inclination, $\Omega$ is nodal angle, and $R$ and $M$ are radius and mass, respectively (with subscripts p $=$ b, c, d, e, f, g for the planets and $\star$ for the star). The star has five additional parameters: $\{M_\star,\, R_\star,\, c_1,\, c_2,\, dilute\}$, where $\{c_i\}$ are the two quadratic limb-darkening coefficients and $dilute$ is the amount of dilution from other nearby sources. We used eccentricity vector components scaling as $e^{1/2}$ so that we get flat priors in total $e$, and fixed the values of $dilute=0$ since there is no evidence of other nearby stars diluting the lightcurve. We also fixed the value of $M_\star$, as transits alone generally only give information about the density of the star, rather than $M_\star$ and $R_\star$ individually. We fixed $\Omega = 0$ for all planets because the data are not precise enough to constrain these values \citep{Migaszewski2012}. Additionally, it is extremely unlikely that there are large mutual inclinations among the planets given that we see six transiting planets (L11, Figure 4), five of which are dynamically packed and thus have no misaligned non-transiting planets between them (L11). We used flat priors for all other parameters.
 
-The best fit solution from $\mathcal{NSI}$ run has lower $\chi^2$ by more than 40 compared to the best-fit $\mathcal{FSP}$ run. Thus we see that fixing the stellar parameters at their spectroscopically measured values causes the fit to the \Kepler data to become significantly worse; the p-value for such an increase in $\chi^2$ is on order $10^{-9}$. This confirms the existence of tension between the transit measured stellar density and the spectroscopically measured one.  
+We ran two DEMCMCs to model the data. One had no constraints on the stellar radius, i.e., allowed the transits themselves to completely determine the stellar density, which we will label $\mathcal{NSI}$ for ``No Spectral Information.'' The second DEMCMC was run with the stellar mass and radius fixed at the spectroscopically measured values in this study, $M_\star=1.04M_\odot$ and $R_\star=1.00M_\odot$, which we will label $\mathcal{FSP}$ for ``Fixed Stellar Parameters.'' The $\mathcal{NSI}$ run produces a lower density star $\rho_\star = 1.191^{+0.043}_{-0.11}$ g cm$^{-3}$ than the fixed value of $\rho_\star = 1.466$ g cm$^{-3}$ in $\mathcal{FSP}$. This indicates that the transit data alone are discrepant with the spectroscopically measured stellar density. Table~\ref{table:den} shows the density results for all bodies for both DEMCMC runs. We note that the densities of planets with no spectral information, $\mathcal{NSI}$, are slightly higher than reported in L13 because that study includes the lower spectroscopically measured stellar density in their final best fits.
+
+The best fit solution from $\mathcal{NSI}$ run has a lower $\chi^2$ value by more than 40 compared to the best-fit $\mathcal{FSP}$ run. Thus we see that fixing the stellar parameters at their spectroscopically measured values causes the fit to the \Kepler data to become significantly worse; the p-value for such an increase in $\chi^2$ is on order $10^{-9}$. This confirms the existence of tension between the transit measured stellar density and the spectroscopically measured one. 
+
 
 \subsection{Physical Interpretation}
 
@@ -267,21 +294,21 @@ The stellar densities found through spectroscopic characterization (1.43 $\pm$ 0
 
 An alternative hypothesis is that some bias in the transit analysis has resulted in an erroneously low inferred stellar density. As described by \citet{Kipping2014}, multiple effects can bias the density measured by transits, including stellar activity, blended background sources, and non-zero planet eccentricities. Bias due to an underestimated planet eccentricity is not a likely explanation in this case, since all five planets give a consistent stellar density. Also, the photodynamical modeling used in this analysis should be robust to the effects of transit timing or duration variations on the measured stellar density. This leaves two potentially viable explanations from \citet{Kipping2014} for the density discrepancy: stellar activity (the ``photospot'' effect) or a background source (the ``photoblend'' effect).
 
-Starspots effectively reduce the observed stellar flux, artificially raising stellar density inferred from the transit depth, which is the opposite of the effect we seek to explain. However, as a $\sim$3-4 Gyr Sun-like star, Kepler-11's activity may manifest mostly in the form of plages \citep{Radick1998}. Unocculted plages could potentially lower the observed stellar density by inflating the measured radii \citep{Oshagh2014}. Given the observed behavior of other main-sequence solar analogs and the lack of rotational modulation in the \Kepler lightcurve, the filling factor for spots or plages on Kepler-11's surface should be of order a few percent \citep{Meunier2010}. This would yield a similarly small change in the observed stellar density \citep{Kipping2014}. Furthermore, the active region configuration would need to be relatively stable throughout \textit{Kepler}'s four years of observations, which is unlikely at the high level of activity needed to have a large plage filling factor.
+Starspots effectively reduce the observed stellar flux, artificially raising stellar density inferred from the transit depth, which is the opposite of the effect we seek to explain. However, as a $\sim$3-4 Gyr Sun-like star, Kepler-11's activity may manifest mostly in the form of plages \citep{Radick1998}. Unocculted plages could potentially lower the observed stellar density by inflating the measured radii \citep{Oshagh2014}. Given the observed behavior of other main-sequence solar analogs and the lack of rotational modulation in the \Kepler lightcurve, the filling factor for spots or plages on Kepler-11's surface should be of order a few percent at most \citep{Meunier2010}. This would yield a similarly small percent-level change in the observed stellar density \citep{Kipping2014}. Furthermore, the active region configuration would need to be relatively stable throughout \textit{Kepler}'s four years of observations, which is unlikely at the high level of activity needed to have a large plage filling factor.
 
-The final effect is blending of unresolved background sources, which can cause stellar density to be underestimated. Recently \citet{Wang2015} found two visual companions to Kepler-11 at separations of 1.36'' and 4.9'' using AO imaging. With brightness differences of $\Delta K$ = 4.4 mag and 4.7 mag respectively, these companions should contribute approximately 3\% of the total flux in the Kepler bandpass \todo{(double-check this)}. Using Equation 9 of \citet{Kipping2014}, this implies that the observed stellar density from transits should be $\sim$99\% of the true density. The known companions are therefore insufficient to explain the magnitude of the density discrepancy.
+The final effect is blending of unresolved background sources, which can cause stellar density to be underestimated. Recently \citet{Wang2015} found two visual companions to Kepler-11 at separations of 1.36'' and 4.9'' using AO imaging. With brightness differences of $\Delta K$ = 4.4 mag and 4.7 mag respectively, these companions should contribute approximately 3\% of the total flux in the Kepler bandpass. Using Equation 9 of \citet{Kipping2014}, this implies that the observed stellar density from transits should be $\sim$99\% of the true density. The known companions are therefore insufficient to explain the magnitude of the density discrepancy.
 
 We are left with no obvious culprit for the discrepancy between the stellar densities measured from spectroscopic characterization and lightcurve modeling. Similar testing for other systems with measured TTVs is an important next step in determining whether this is a one-off event due to, e.g. underestimated uncertainties of stellar properties or unexpected stellar activity in the lightcurve, or if it is a systematic difference between these independent methods of analysis. If this is a systematic effect, it may be linked to the putative planet density underestimation problem in the TTV community \citep{Weiss2014}.
 
 \subsection{Implications for the Planets}
 
-The mass and radius of Kepler-11 has considerable repercussions for its planetary system. We can approximate the planet mass derived from TTVs as a linear function of the assumed stellar mass. The planet radius also has a linear dependence on stellar radius, since only the relative surface areas of planet and star can be measured by the transit depth. The stellar properties obtained through spectroscopic analysis therefore raise the planet masses by a factor of 8\% and lower the planet radii by a factor of 5\% relative to the transit and TTV-derived values. The results are shown in Figure \ref{fig:mr}.
+The adopted mass and radius of Kepler-11 has considerable repercussions for its planetary system. We can approximate the planet mass derived from TTVs as a linear function of the assumed stellar mass. The planet radius also has a linear dependence on stellar radius, since only the relative surface areas of planet and star can be measured by the transit depth. The stellar properties obtained through spectroscopic analysis therefore raise the planet masses by a factor of 8\% and lower the planet radii by a factor of 5\% relative to the transit and TTV-derived values. The results are shown in Figure \ref{fig:mr}.
 
 Adopting the stellar properties from spectroscopic analysis raises the mean densities of the Kepler-11 planets by $\sim$30\%. These increased densities, which imply a lower gas mass fraction in the planets' compositions, could make in-situ formation an increasingly viable explanation \citep[see e.g.][]{Lee2014}.
 
 \subsection{Stellar Composition \& Planets}
 
-While Kepler-11 is slightly more metal-rich than the Sun, its relative elemental abundances have a similar trend with \tc\ to the solar abundance pattern. Under the \citet{Melendez2009} hypothesis that the Sun's photospheric composition reflects its planet-forming history, we could interpret Kepler-11's abundance pattern as a signature of the formation of rocky planets. Such a chemical signature of terrestrial planet formation has also been revealed in Kepler-10 host star, showing the depletion of refractory materials, when compared to its stellar twins \citep{Liu2016}. It is, however, somewhat dangerous to draw conclusions about the abundance pattern of an individual system, as many other factors can affect stellar abundances at the few-percent level, including galactic chemical evolution and circumstellar disk physics \citep{Gaidos2015}.
+While Kepler-11 is slightly more metal-rich than the Sun, its relative elemental abundances have a similar trend with \tc\ to the solar abundance pattern. Under the \citet{Melendez2009} hypothesis that the Sun's photospheric composition reflects its planet-forming history, we could interpret Kepler-11's abundance pattern as a signature of the formation of rocky planets. Such a chemical signature of terrestrial planet formation has also been revealed in Kepler-10 host star, showing the depletion of refractory materials when compared to its stellar twins \citep{Liu2016}. It is, however, somewhat dangerous to draw conclusions about the abundance pattern of an individual system, as many other factors can affect stellar abundances at the few-percent level, including galactic chemical evolution and circumstellar disk physics \citep{Gaidos2015}.
 
 The relatively large uncertainty on the condensation temperature trend underscores the importance of galactic chemical evolution effects in particular. Although we have achieved very high-precision stellar abundance measurements, more work remains to be done on disentangling potential planet formation signatures from stellar age-dependent effects. For an individual system, even a solar twin with an age within a couple Gyr of the Sun, the uncertain effects of GCE make it extremely challenging to draw conclusions about the significance of the stellar abundance pattern in the context of planet formation. Fortunately, large-scale surveys like APOGEE and GAIA-ESO will provide the large sample sizes needed to refine high-precision abundance-age relations.
 
@@ -316,70 +343,88 @@ M.B. is supported by a National Science Foundation Graduate Research Fellowship 
 \bibliography{K11.bib}
 
 \pagebreak
-\begin{sidewaystable}
-\caption{Line List and Measured Equivalent Widths.}
-\label{tbl:ews}
-\centering 
-\begin{tabular}{ccccccccccccccc} 
-\hline
-\hline
-{Wavelength} & Species & EP & log($gf$) & Kepler-11 & Sun & HD1178 & HD10145 & HD16623 & HD20329 & HD21727 & HD21774 & HD28474 & HD176733 & HD191069 \\
- (\r{A}) &  & (eV) & (dex) & (m\r{A}) & (m\r{A}) & (m\r{A}) & (m\r{A}) & (m\r{A}) & (m\r{A}) & (m\r{A}) & (m\r{A}) & (m\r{A}) & (m\r{A}) & (m\r{A}) \\
-\hline
+
+\begin{longrotatetable}
+\begin{deluxetable*}{ccccccccccccccc} 
+\centering
+\tablecaption{Line List and Measured Equivalent Widths.\label{tbl:ews}}
+%\tablewidth{900pt}
+\tabletypesize{\scriptsize}
+\tablehead{
+\colhead{Wavelength} & \colhead{Species} & 
+\colhead{EP} & \colhead{log($gf$)} & \colhead{Kepler-11} & \colhead{Sun} &
+\colhead{HD1178} & \colhead{HD10145} & 
+\colhead{HD16623} & \colhead{HD20329} & 
+\colhead{HD21727} & \colhead{HD21774} & \colhead{HD28474} &
+\colhead{HD176733} & \colhead{HD191069} \\
+\colhead{(\r{A})} & \colhead{} & \colhead{eV} & \colhead{(dex)} &
+\colhead{(m\r{A})} & \colhead{(m\r{A})} & \colhead{(m\r{A})} & 
+\colhead{(m\r{A})} & \colhead{(m\r{A})} & \colhead{(m\r{A})} & 
+\colhead{(m\r{A})} & \colhead{(m\r{A})} & \colhead{(m\r{A})} & 
+\colhead{(m\r{A})} & \colhead{(m\r{A})}
+} 
+\startdata
 5052.167 & 6  & 7.685 & $-$1.24 & 35.2 & 33.5 & 32.7 & 27.9 & 21.4 & 29.4 & 26.6 & 41.6 & 17 & 27.4 & 36.7 \\
 6587.61 & 6 & 8.537 & $-$1.05 & 16.9 & 15.2 & 17 & 12.2 & 9.8 & 11.4 & 11.7 & 20.3 & 6.2 & 10.8 & 17 \\
 7111.47 & 6 & 8.64 & $-$1.07 & 13.2 & 11.3 & 12.1 & 15.1 & 9.6 & 12.3 & 10.9 & 16.6 & 36.7 & 10.2 & 14 \\
 7113.179 &  6 & 8.647 & $-$0.76 & 25.3 & 22.4 & 23.2 & 20.3 & 13.8 & 17.9 & 19.5 & 33 & 11.3 & 18.2 & 24.3 \\
 7771.944 & 8 & 9.146 & 0.37 & 77.8 & 69.7 & 79.1 & 63.6 & 71 & 69.4 & 62.9 & 79.9 & 56.9 & 61.5 & 81.8 \\
   &  & & & & & & $\vdots$   & &  & & & & \\
-\hline       
-\end{tabular}
-\tablecomments{Table \ref{tbl:ews} is published in its entirety in the electronic edition of ApJ. A portion is shown here for guidance regarding its form and content.}
+\enddata
+\tablecomments{Table \ref{tbl:ews} is published in its entirety in the machine-readable format. A portion is shown here for guidance regarding its form and content.}
+\end{deluxetable*}
+\end{longrotatetable}
 
-
-\end{sidewaystable}
 
 
 \pagebreak
 
 
-\begin{sidewaystable}
-\caption{Differential Abundances [X/H].}
-\label{tbl:abund}
-%\centering 
-\begin{tabular}{lccccccccccc} 
-\hline    
-\hline 
-{Element} & $N_{lines}$ & Kepler-11 & HD1178 & HD10145 & HD16623 & HD20329 & HD21727 & HD21774 & HD28474 & HD176733 & HD191069 \\
-\hline\
-CI & 4 & 0.027$\pm$0.015 & 0.122$\pm$0.035 & 0.069$\pm$0.118 & $-$0.204$\pm$0.082 & 0.053$\pm$0.079 & 0.029$\pm$0.061 & 0.182$\pm$0.041 & $-$0.090$\pm$0.457 & 0.007$\pm$0.050 & 0.074$\pm$0.025 \\
-OI & 3 & 0.058$\pm$0.012 & 0.179$\pm$0.077 & 0.083$\pm$0.021 & $-$0.086$\pm$0.022 & 0.174$\pm$0.034 & 0.078$\pm$0.028 & 0.204$\pm$0.020 & $-$0.269$\pm$0.022 & 0.048$\pm$0.028 & 0.145$\pm$0.019 \\
-NaI & 4 & 0.045$\pm$0.017 & $-$0.027$\pm$0.020 & $-$0.117$\pm$0.047 & $-$0.389$\pm$0.019 & $-$0.035$\pm$0.037 & $-$0.080$\pm$0.025 & 0.267$\pm$0.032 & $-$0.558$\pm$0.054 & $-$0.027$\pm$0.025 & $-$0.010$\pm$0.022 \\
-MgI & 5 & 0.035$\pm$0.026 & 0.098$\pm$0.031 & 0.046$\pm$0.013 & $-$0.228$\pm$0.049 & 0.047$\pm$0.116 & 0.058$\pm$0.059 & 0.258$\pm$0.043 & $-$0.411$\pm$0.063 & 0.025$\pm$0.042 & 0.093$\pm$0.018 \\
-AlI & 2 & 0.061$\pm$0.008 & 0.176$\pm$0.018 & 0.035$\pm$0.005 & $-$0.297$\pm$0.012 & 0.177$\pm$0.025 & 0.075$\pm$0.005 & 0.279$\pm$0.009 & $-$0.469$\pm$0.007 & 0.042$\pm$0.005 & 0.114$\pm$0.011 \\
-SiI & 14 & 0.047$\pm$0.018 & 0.038$\pm$0.031 & 0.000$\pm$0.014 & $-$0.285$\pm$0.028 & 0.042$\pm$0.046 & 0.022$\pm$0.028 & 0.245$\pm$0.021 & $-$0.461$\pm$0.037 & $-$0.004$\pm$0.019 & 0.040$\pm$0.012 \\
-SI & 4 & 0.036$\pm$0.040 & 0.106$\pm$0.037 & 0.057$\pm$0.026 & $-$0.249$\pm$0.063 & 0.034$\pm$0.086 & 0.021$\pm$0.025 & 0.235$\pm$0.025 & $-$0.385$\pm$0.089 & 0.031$\pm$0.054 & 0.087$\pm$0.049 \\
-KI & 1 & 0.068$\pm$0.014 & 0.031$\pm$0.007 & $-$0.039$\pm$0.008 & $-$0.168$\pm$0.000 & $-$0.025$\pm$0.006 & $-$0.061$\pm$0.013 & 0.192$\pm$0.014 & $-$0.355$\pm$0.006 & $-$0.077$\pm$0.018 & 0.060$\pm$0.008 \\
-CaI & 11 & 0.066$\pm$0.018 & 0.072$\pm$0.028 & 0.016$\pm$0.015 & $-$0.301$\pm$0.018 & 0.052$\pm$0.040 & 0.043$\pm$0.029 & 0.230$\pm$0.020 & $-$0.494$\pm$0.020 & $-$0.003$\pm$0.017 & 0.032$\pm$0.013 \\
-ScI & 4 & 0.086$\pm$0.037 & 0.096$\pm$0.032 & 0.027$\pm$0.027 & $-$0.335$\pm$0.062 & 0.067$\pm$0.061 & 0.037$\pm$0.026 & 0.271$\pm$0.033 & $-$0.368$\pm$0.079 & 0.005$\pm$0.043 & 0.070$\pm$0.014 \\
-ScII & 5 & 0.101$\pm$0.018 & 0.140$\pm$0.053 & 0.037$\pm$0.012 & $-$0.288$\pm$0.035 & 0.144$\pm$0.051 & 0.107$\pm$0.047 & 0.316$\pm$0.023 & $-$0.465$\pm$0.044 & 0.004$\pm$0.011 & 0.116$\pm$0.044 \\
-TiI & 18 & 0.065$\pm$0.021 & 0.113$\pm$0.024 & 0.046$\pm$0.044 & $-$0.244$\pm$0.031 & 0.148$\pm$0.031 & 0.064$\pm$0.027 & 0.243$\pm$0.042 & $-$0.451$\pm$0.024 & 0.009$\pm$0.021 & 0.080$\pm$0.020 \\
-TiII & 11 & 0.070$\pm$0.027 & 0.108$\pm$0.046 & 0.016$\pm$0.093 & $-$0.229$\pm$0.049 & 0.117$\pm$0.031 & 0.025$\pm$0.100 & 0.255$\pm$0.044 & $-$0.423$\pm$0.031 & $-$0.007$\pm$0.027 & 0.101$\pm$0.038 \\
-VI & 9 & 0.078$\pm$0.017 & 0.078$\pm$0.018 & $-$0.007$\pm$0.024 & $-$0.323$\pm$0.029 & 0.097$\pm$0.089 & 0.043$\pm$0.027 & 0.275$\pm$0.023 & $-$0.530$\pm$0.042 & 0.009$\pm$0.020 & 0.034$\pm$0.018 \\
-CrI & 10 & 0.047$\pm$0.020 & 0.017$\pm$0.022 & 0.008$\pm$0.058 & $-$0.484$\pm$0.039 & $-$0.065$\pm$0.028 & 0.012$\pm$0.017 & 0.272$\pm$0.035 & $-$0.626$\pm$0.055 & 0.001$\pm$0.019 & $-$0.023$\pm$0.016 \\
-CrII & 5 & 0.055$\pm$0.020 & 0.010$\pm$0.018 & $-$0.012$\pm$0.050 & $-$0.415$\pm$0.048 & $-$0.073$\pm$0.017 & 0.014$\pm$0.028 & 0.243$\pm$0.028 & $-$0.586$\pm$0.051 & $-$0.025$\pm$0.024 & $-$0.028$\pm$0.019 \\
-MnI & 8 & 0.060$\pm$0.025 & $-$0.048$\pm$0.025 & $-$0.071$\pm$0.030 & $-$0.634$\pm$0.028 & $-$0.183$\pm$0.018 & $-$0.045$\pm$0.018 & 0.298$\pm$0.031 & $-$0.778$\pm$0.058 & $-$0.028$\pm$0.020 & $-$0.084$\pm$0.017 \\
-FeI & 92 & 0.062$\pm$0.024 & 0.013$\pm$0.023 & $-$0.016$\pm$0.050 & $-$0.462$\pm$0.061 & $-$0.093$\pm$0.022 & 0.005$\pm$0.069 & 0.252$\pm$0.079 & $-$0.613$\pm$0.046 & $-$0.018$\pm$0.028 & $-$0.034$\pm$0.091 \\
-FeII & 17 & 0.064$\pm$0.020 & 0.011$\pm$0.047 & $-$0.019$\pm$0.107 & $-$0.461$\pm$0.075 & $-$0.096$\pm$0.052 & 0.008$\pm$0.033 & 0.251$\pm$0.032 & $-$0.617$\pm$0.071 & $-$0.017$\pm$0.022 & $-$0.030$\pm$0.036 \\
-CoI & 6 & 0.062$\pm$0.007 & 0.053$\pm$0.037 & $-$0.026$\pm$0.023 & $-$0.314$\pm$0.048 & 0.023$\pm$0.024 & 0.009$\pm$0.027 & 0.260$\pm$0.013 & $-$0.499$\pm$0.038 & $-$0.004$\pm$0.010 & 0.052$\pm$0.018 \\
-NiI & 20 & 0.066$\pm$0.021 & 0.010$\pm$0.024 & $-$0.034$\pm$0.023 & $-$0.443$\pm$0.025 & $-$0.061$\pm$0.035 & $-$0.001$\pm$0.040 & 0.278$\pm$0.029 & $-$0.631$\pm$0.035 & $-$0.012$\pm$0.039 & $-$0.011$\pm$0.024 \\
-CuI & 4 & 0.080$\pm$0.011 & 0.075$\pm$0.032 & $-$0.021$\pm$0.016 & $-$0.472$\pm$0.054 & 0.000$\pm$0.011 & $-$0.002$\pm$0.021 & 0.325$\pm$0.032 & $-$0.630$\pm$0.090 & 0.053$\pm$0.034 & 0.056$\pm$0.021 \\
-ZnI & 3 & 0.036$\pm$0.039 & 0.036$\pm$0.015 & 0.006$\pm$0.026 & $-$0.315$\pm$0.048 & 0.056$\pm$0.031 & $-$0.011$\pm$0.014 & 0.283$\pm$0.056 & $-$0.539$\pm$0.087 & $-$0.007$\pm$0.007 & 0.087$\pm$0.022 \\
-YII & 5 & 0.078$\pm$0.024 & $-$0.025$\pm$0.008 & $-$0.052$\pm$0.026 & $-$0.579$\pm$0.031 & $-$0.123$\pm$0.028 & $-$0.047$\pm$0.012 & 0.228$\pm$0.013 & $-$0.673$\pm$0.038 & $-$0.051$\pm$0.026 & $-$0.090$\pm$0.016 \\
-CH & 3 & 0.054$\pm$0.007 & $-$0.006$\pm$0.015 & $-$0.070$\pm$0.021 & $-$0.436$\pm$0.011 & $-$0.199$\pm$0.019 & $-$0.090$\pm$0.025 & 0.225$\pm$0.025 & $-$0.620$\pm$0.012 & $-$0.031$\pm$0.026 & $-$0.003$\pm$0.027 \\
-\hline       
-\end{tabular}
-\end{sidewaystable}
+
+\begin{longrotatetable}
+\begin{deluxetable*}{lcccccccccccc} 
+\tablecaption{Differential Abundances [X/H].\label{tbl:abund}}
+\tablewidth{900pt}
+\tabletypesize{\scriptsize}
+\tablehead{
+\colhead{Element} & \colhead{$T_{c}$\tablenotemark{1}} & 
+\colhead{$N_{lines}$} & \colhead{Kepler-11} & 
+\colhead{HD1178} & \colhead{HD10145} & 
+\colhead{HD16623} & \colhead{HD20329} & 
+\colhead{HD21727} & \colhead{HD21774} & \colhead{HD28474} &
+\colhead{HD176733} & \colhead{HD191069}
+} 
+\startdata
+CI & 40 & 4 & 0.027 $\pm$ 0.015 & 0.122 $\pm$ 0.035 & 0.069 $\pm$ 0.118 & $-$0.204 $\pm$ 0.082 & 0.053 $\pm$ 0.079 & 0.029 $\pm$ 0.061 & 0.182 $\pm$ 0.041 & $-$0.090 $\pm$ 0.457 & 0.007 $\pm$ 0.050 & 0.074 $\pm$ 0.025 \\
+OI & 180 & 3 & 0.058 $\pm$ 0.012 & 0.179 $\pm$ 0.077 & 0.083 $\pm$ 0.021 & $-$0.086 $\pm$ 0.022 & 0.174 $\pm$ 0.034 & 0.078 $\pm$ 0.028 & 0.204 $\pm$ 0.020 & $-$0.269 $\pm$ 0.022 & 0.048 $\pm$ 0.028 & 0.145 $\pm$ 0.019 \\
+NaI & 958 & 4 & 0.045 $\pm$ 0.017 & $-$0.027 $\pm$ 0.020 & $-$0.117 $\pm$ 0.047 & $-$0.389 $\pm$ 0.019 & $-$0.035 $\pm$ 0.037 & $-$0.080 $\pm$ 0.025 & 0.267 $\pm$ 0.032 & $-$0.558 $\pm$ 0.054 & $-$0.027 $\pm$ 0.025 & $-$0.010 $\pm$ 0.022 \\
+MgI & 1336 & 5 & 0.035 $\pm$ 0.026 & 0.098 $\pm$ 0.031 & 0.046 $\pm$ 0.013 & $-$0.228 $\pm$ 0.049 & 0.047 $\pm$ 0.116 & 0.058 $\pm$ 0.059 & 0.258 $\pm$ 0.043 & $-$0.411 $\pm$ 0.063 & 0.025 $\pm$ 0.042 & 0.093 $\pm$ 0.018 \\
+AlI & 1653 & 2 & 0.061 $\pm$ 0.008 & 0.176 $\pm$ 0.018 & 0.035 $\pm$ 0.005 & $-$0.297 $\pm$ 0.012 & 0.177 $\pm$ 0.025 & 0.075 $\pm$ 0.005 & 0.279 $\pm$ 0.009 & $-$0.469 $\pm$ 0.007 & 0.042 $\pm$ 0.005 & 0.114 $\pm$ 0.011 \\
+SiI & 1310 & 14 & 0.047 $\pm$ 0.018 & 0.038 $\pm$ 0.031 & 0.000 $\pm$ 0.014 & $-$0.285 $\pm$ 0.028 & 0.042 $\pm$ 0.046 & 0.022 $\pm$ 0.028 & 0.245 $\pm$ 0.021 & $-$0.461 $\pm$ 0.037 & $-$0.004 $\pm$ 0.019 & 0.040 $\pm$ 0.012 \\
+SI & 664 & 4 & 0.036 $\pm$ 0.040 & 0.106 $\pm$ 0.037 & 0.057 $\pm$ 0.026 & $-$0.249 $\pm$ 0.063 & 0.034 $\pm$ 0.086 & 0.021 $\pm$ 0.025 & 0.235 $\pm$ 0.025 & $-$0.385 $\pm$ 0.089 & 0.031 $\pm$ 0.054 & 0.087 $\pm$ 0.049 \\
+KI & 1006 & 1 & 0.068 $\pm$ 0.014 & 0.031 $\pm$ 0.007 & $-$0.039 $\pm$ 0.008 & $-$0.168 $\pm$ 0.000 & $-$0.025 $\pm$ 0.006 & $-$0.061 $\pm$ 0.013 & 0.192 $\pm$ 0.014 & $-$0.355 $\pm$ 0.006 & $-$0.077 $\pm$ 0.018 & 0.060 $\pm$ 0.008 \\
+CaI & 1517 & 11 & 0.066 $\pm$ 0.018 & 0.072 $\pm$ 0.028 & 0.016 $\pm$ 0.015 & $-$0.301 $\pm$ 0.018 & 0.052 $\pm$ 0.040 & 0.043 $\pm$ 0.029 & 0.230 $\pm$ 0.020 & $-$0.494 $\pm$ 0.020 & $-$0.003 $\pm$ 0.017 & 0.032 $\pm$ 0.013 \\
+ScI & 1659 & 4 & 0.086 $\pm$ 0.037 & 0.096 $\pm$ 0.032 & 0.027 $\pm$ 0.027 & $-$0.335 $\pm$ 0.062 & 0.067 $\pm$ 0.061 & 0.037 $\pm$ 0.026 & 0.271 $\pm$ 0.033 & $-$0.368 $\pm$ 0.079 & 0.005 $\pm$ 0.043 & 0.070 $\pm$ 0.014 \\
+ScII & 1659 & 5 & 0.101 $\pm$ 0.018 & 0.140 $\pm$ 0.053 & 0.037 $\pm$ 0.012 & $-$0.288 $\pm$ 0.035 & 0.144 $\pm$ 0.051 & 0.107 $\pm$ 0.047 & 0.316 $\pm$ 0.023 & $-$0.465 $\pm$ 0.044 & 0.004 $\pm$ 0.011 & 0.116 $\pm$ 0.044 \\
+TiI & 1582 & 18 & 0.065 $\pm$ 0.021 & 0.113 $\pm$ 0.024 & 0.046 $\pm$ 0.044 & $-$0.244 $\pm$ 0.031 & 0.148 $\pm$ 0.031 & 0.064 $\pm$ 0.027 & 0.243 $\pm$ 0.042 & $-$0.451 $\pm$ 0.024 & 0.009 $\pm$ 0.021 & 0.080 $\pm$ 0.020 \\
+TiII & 1582 & 11 & 0.070 $\pm$ 0.027 & 0.108 $\pm$ 0.046 & 0.016 $\pm$ 0.093 & $-$0.229 $\pm$ 0.049 & 0.117 $\pm$ 0.031 & 0.025 $\pm$ 0.100 & 0.255 $\pm$ 0.044 & $-$0.423 $\pm$ 0.031 & $-$0.007 $\pm$ 0.027 & 0.101 $\pm$ 0.038 \\
+VI & 1429 & 9 & 0.078 $\pm$ 0.017 & 0.078 $\pm$ 0.018 & $-$0.007 $\pm$ 0.024 & $-$0.323 $\pm$ 0.029 & 0.097 $\pm$ 0.089 & 0.043 $\pm$ 0.027 & 0.275 $\pm$ 0.023 & $-$0.530 $\pm$ 0.042 & 0.009 $\pm$ 0.020 & 0.034 $\pm$ 0.018 \\
+CrI & 1296 & 10 & 0.047 $\pm$ 0.020 & 0.017 $\pm$ 0.022 & 0.008 $\pm$ 0.058 & $-$0.484 $\pm$ 0.039 & $-$0.065 $\pm$ 0.028 & 0.012 $\pm$ 0.017 & 0.272 $\pm$ 0.035 & $-$0.626 $\pm$ 0.055 & 0.001 $\pm$ 0.019 & $-$0.023 $\pm$ 0.016 \\
+CrII & 1296 & 5 & 0.055 $\pm$ 0.020 & 0.010 $\pm$ 0.018 & $-$0.012 $\pm$ 0.050 & $-$0.415 $\pm$ 0.048 & $-$0.073 $\pm$ 0.017 & 0.014 $\pm$ 0.028 & 0.243 $\pm$ 0.028 & $-$0.586 $\pm$ 0.051 & $-$0.025 $\pm$ 0.024 & $-$0.028 $\pm$ 0.019 \\
+MnI & 1158 & 8 & 0.060 $\pm$ 0.025 & $-$0.048 $\pm$ 0.025 & $-$0.071 $\pm$ 0.030 & $-$0.634 $\pm$ 0.028 & $-$0.183 $\pm$ 0.018 & $-$0.045 $\pm$ 0.018 & 0.298 $\pm$ 0.031 & $-$0.778 $\pm$ 0.058 & $-$0.028 $\pm$ 0.020 & $-$0.084 $\pm$ 0.017 \\
+FeI & 1334 & 92 & 0.062 $\pm$ 0.024 & 0.013 $\pm$ 0.023 & $-$0.016 $\pm$ 0.050 & $-$0.462 $\pm$ 0.061 & $-$0.093 $\pm$ 0.022 & 0.005 $\pm$ 0.069 & 0.252 $\pm$ 0.079 & $-$0.613 $\pm$ 0.046 & $-$0.018 $\pm$ 0.028 & $-$0.034 $\pm$ 0.091 \\
+FeII & 1334 & 17 & 0.064 $\pm$ 0.020 & 0.011 $\pm$ 0.047 & $-$0.019 $\pm$ 0.107 & $-$0.461 $\pm$ 0.075 & $-$0.096 $\pm$ 0.052 & 0.008 $\pm$ 0.033 & 0.251 $\pm$ 0.032 & $-$0.617 $\pm$ 0.071 & $-$0.017 $\pm$ 0.022 & $-$0.030 $\pm$ 0.036 \\
+CoI & 1352 & 6 & 0.062 $\pm$ 0.007 & 0.053 $\pm$ 0.037 & $-$0.026 $\pm$ 0.023 & $-$0.314 $\pm$ 0.048 & 0.023 $\pm$ 0.024 & 0.009 $\pm$ 0.027 & 0.260 $\pm$ 0.013 & $-$0.499 $\pm$ 0.038 & $-$0.004 $\pm$ 0.010 & 0.052 $\pm$ 0.018 \\
+NiI & 1353 & 20 & 0.066 $\pm$ 0.021 & 0.010 $\pm$ 0.024 & $-$0.034 $\pm$ 0.023 & $-$0.443 $\pm$ 0.025 & $-$0.061 $\pm$ 0.035 & $-$0.001 $\pm$ 0.040 & 0.278 $\pm$ 0.029 & $-$0.631 $\pm$ 0.035 & $-$0.012 $\pm$ 0.039 & $-$0.011 $\pm$ 0.024 \\
+CuI & 1037 & 4 & 0.080 $\pm$ 0.011 & 0.075 $\pm$ 0.032 & $-$0.021 $\pm$ 0.016 & $-$0.472 $\pm$ 0.054 & 0.000 $\pm$ 0.011 & $-$0.002 $\pm$ 0.021 & 0.325 $\pm$ 0.032 & $-$0.630 $\pm$ 0.090 & 0.053 $\pm$ 0.034 & 0.056 $\pm$ 0.021 \\
+ZnI & 726 & 3 & 0.036 $\pm$ 0.039 & 0.036 $\pm$ 0.015 & 0.006 $\pm$ 0.026 & $-$0.315 $\pm$ 0.048 & 0.056 $\pm$ 0.031 & $-$0.011 $\pm$ 0.014 & 0.283 $\pm$ 0.056 & $-$0.539 $\pm$ 0.087 & $-$0.007 $\pm$ 0.007 & 0.087 $\pm$ 0.022 \\
+YII & 1659 & 5 & 0.078 $\pm$ 0.024 & $-$0.025 $\pm$ 0.008 & $-$0.052 $\pm$ 0.026 & $-$0.579 $\pm$ 0.031 & $-$0.123 $\pm$ 0.028 & $-$0.047 $\pm$ 0.012 & 0.228 $\pm$ 0.013 & $-$0.673 $\pm$ 0.038 & $-$0.051 $\pm$ 0.026 & $-$0.090 $\pm$ 0.016 \\
+CH & 40 & 3 & 0.054 $\pm$ 0.007 & $-$0.006 $\pm$ 0.015 & $-$0.070 $\pm$ 0.021 & $-$0.436 $\pm$ 0.011 & $-$0.199 $\pm$ 0.019 & $-$0.090 $\pm$ 0.025 & 0.225 $\pm$ 0.025 & $-$0.620 $\pm$ 0.012 & $-$0.031 $\pm$ 0.026 & $-$0.003 $\pm$ 0.027 \\
+\enddata
+\tablenotetext{1}{50\% condensation temperature for the element under protoplanetary disk conditions from \citet{Lodders2003}.}
+\end{deluxetable*}
+\end{longrotatetable}
+
 
 
 

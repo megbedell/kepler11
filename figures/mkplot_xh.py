@@ -55,9 +55,9 @@ if __name__ == "__main__":
     for i in range(19):
         ax = fig.add_subplot(5, 4, loc + 1)
         xfe_errs = np.sqrt(feh_errs**2 + xh_errs[i,:]**2)
-        ax.errorbar(fehs[thin],xhs[i,thin]-fehs[thin],xerr=feh_errs[thin],yerr=xfe_errs[thin],color=c2,mec=c2,fmt='o',markersize=10, label='thin disk')
-        ax.errorbar(fehs[thick],xhs[i,thick]-fehs[thick],xerr=feh_errs[thick],yerr=xfe_errs[thick],color=c1,mec=c1,fmt='o',markersize=10, label='thick disk')
-        ax.errorbar(fehs[0],xhs[i,0]-fehs[0],xerr=feh_errs[0],yerr=xfe_errs[0],color='black',mec='black',markeredgewidth=1.,fmt='*',markersize=14, label='Kepler-11')
+        ax.errorbar(fehs[thin],xhs[i,thin]-fehs[thin],xerr=feh_errs[thin],yerr=xfe_errs[thin],color=c2,mec=c2,fmt='o',markersize=6, label='thin disk')
+        ax.errorbar(fehs[thick],xhs[i,thick]-fehs[thick],xerr=feh_errs[thick],yerr=xfe_errs[thick],color=c1,mec=c1,fmt='o',markersize=6, label='thick disk')
+        ax.errorbar(fehs[0],xhs[i,0]-fehs[0],xerr=feh_errs[0],yerr=xfe_errs[0],color='black',mec='black',markeredgewidth=1.,fmt='*',markersize=12, label='Kepler-11')
         ax.set_ylabel('[{0}/Fe]'.format(elements[i]),fontsize=20)
         majorLocator = MultipleLocator(0.2)
         minorLocator = MultipleLocator(0.05)

@@ -69,10 +69,12 @@ if __name__ == "__main__":
     x_all = np.arange(2000)*1.0 - 100.0
     
 
-    abund_linear, err, Tc = q2.gce.correct(K11, age=4.6, method='linear', silent=False)
+    abund_linear, err, Tc = q2.gce.correct(K11, age=4.6, method='linear', silent=True)
     #abund_linear = np.delete(abund_linear, 7)
     #err = np.delete(err, 7)
     #Tc = np.delete(Tc, 7)
+    #abund_linear[7] -= 0.019  # LTE correction
+    err[7] *= np.sqrt(2)
     ax.errorbar(Tc,abund_linear,yerr=err,color=c1,mec=c1,fmt='o',markersize=10)
     
     popt, pcov = curve_fit(linear, Tc, abund_linear, sigma=err, absolute_sigma=True)
@@ -83,11 +85,15 @@ if __name__ == "__main__":
     
     
     # with GCE:
-    abund_linear, err, Tc = q2.gce.correct(K11, age=2.7, method='linear', silent=True)
+    abund_linear, err, Tc = q2.gce.correct(K11, age=2.7, method='linear', silent=False)
     # exclude K:
     #abund_linear = np.delete(abund_linear, 7)
     #err = np.delete(err, 7)
     #Tc = np.delete(Tc, 7)
+    #abund_linear[7] -= 0.019  # LTE correction
+    err[7] *= np.sqrt(2)
+    
+    
     
     
     ax = fig.add_subplot(1, 2, 2)
@@ -115,12 +121,13 @@ if __name__ == "__main__":
     plt.fill_between(x_all,linear(x_all, slope_hi, int_lo), linear(x_all, slope_lo, int_hi),\
         color=c1,alpha=0.2) # ASSUMES PERFECT ANTI-CORRELATION
     
-    '''''    
+    '''''   
     rand = np.random.randint(0,high=len(slopes),size=500)
     rand = rand[(slopes[rand] >= slope_lo) & (slopes[rand] <= slope_hi)]
     for i in rand:
         ax.plot(x_all,linear(x_all,slopes[i],intercepts[i]),color=c1,alpha=0.2)
     '''
+    
 
     ax.errorbar(Tc,abund_linear,yerr=err,color=c1,mec=c1,fmt='o',markersize=10)
     ax.plot(x_all, linear(x_all, slope_med, int_med), color=c1, linewidth=2)
