@@ -60,7 +60,7 @@ S\~{a}o Paulo, Rua do Mat\~{a}o 1226, Cidade Universit\'{a}ria, 05508-900 S\~{a}
 
 \begin{abstract}
 
-The six planets of the Kepler-11 system are the archetypal example of a population of surprisingly low-density transiting planets revealed by the \Kepler mission. We have determined the fundamental parameters and chemical composition of the Kepler-11 host star to unprecedented precision using an extremely high quality spectrum from Keck-HIRES (R$\simeq$67,000, S/N per pixel$\simeq$260 at 600 nm). Contrary to previously published results, our spectroscopic constraints indicate that Kepler-11 is a young main-sequence solar twin. The revised stellar parameters raise the densities of the Kepler-11 planets by about 30\%, making them more typical of the emerging class of ``puffy'' close-in exoplanets. We obtain photospheric abundances of 22 elements and find that Kepler-11 is enhanced in refractory materials relative to the solar abundance pattern. We additionally analyze the \Kepler transits and transit timing variations (TTVs) using a photodynamical model and discuss the tension between spectroscopic and TTV-based stellar density estimates.
+The six planets of the Kepler-11 system are the archetypal example of a population of surprisingly low-density transiting planets revealed by the \Kepler mission. We have determined the fundamental parameters and chemical composition of the Kepler-11 host star to unprecedented precision using an extremely high quality spectrum from Keck-HIRES (R$\simeq$67,000, S/N per pixel$\simeq$260 at 600 nm). Contrary to previously published results, our spectroscopic constraints indicate that Kepler-11 is a young main-sequence solar twin. The revised stellar parameters raise the densities of the Kepler-11 planets by about 30\%, making them more typical of the emerging class of ``puffy'' close-in exoplanets. We obtain photospheric abundances of 22 elements and find that Kepler-11 has an abundance pattern similar to that of the Sun. We additionally analyze the \Kepler lightcurves using a photodynamical model and discuss the tension between spectroscopic and transit/TTV-based stellar density estimates.
 
 \end{abstract}
 
@@ -132,7 +132,7 @@ The stellar effective temperature \teff, surface gravity \logg, metallicity \mh,
 
 Parameter solutions were found iteratively using the $q^2$ python package.\footnote{\url{https://github.com/astroChasqui/q2}} Uncertainties were determined by propagating scatter among the measured line abundances as described in \citet{Epstein2010} and \citet{Bensby2014}.
 
-The resulting stellar parameters for all observed stars are given in Table \ref{tbl:param}. The \teff\ and \logg\ for Kepler-11 are significantly higher than previously determined values. We find \teff\ = 5836 $\pm$ 7 K, \logg\ = 4.44 $\pm$ 0.02 dex, and \feh = 0.062 $\pm$ 0.007 dex, while L13, for example, find \teff\ = 5666 $\pm$ 60 K, \logg\ = 4.28 $\pm$ 0.07 dex, and \feh = 0.00 $\pm$ 0.04 dex. Potential sources of this tension include the substantially different S/N of spectra used and the difference in analysis technique. L13 and other previous analyses use SME, which fits synthetic spectra to the observations. Different choices of spectral analysis technique have been shown to vary the derived stellar parameters beyond their nominal error estimates, so this explanation cannot be ruled out \citep{Hinkel2016}.
+The resulting stellar parameters for all observed stars are given in Table \ref{tbl:param}. The \teff\ and \logg\ for Kepler-11 are significantly higher than previously determined values. We find \teff\ = 5836 $\pm$ 7 K, \logg\ = 4.44 $\pm$ 0.02 dex, and \feh = 0.062 $\pm$ 0.007 dex, while L13, for example, find \teff\ = 5666 $\pm$ 60 K, \logg\ = 4.28 $\pm$ 0.07 dex, and \feh = 0.00 $\pm$ 0.04 dex. Potential sources of this tension include the substantially different S/N of spectra used and the difference in analysis technique. L13 and other previous analyses use SME, which fits synthetic spectra to the observations. Different choices of spectral analysis technique have been shown to vary the derived stellar parameters beyond their nominal error estimates, so this explanation cannot be ruled out \citep{Hinkel2016}. However, since our analysis is performed relative to the solar spectrum, our results are anchored to the accurate stellar parameters of the Sun. Furthermore, our method is strictly differential, based on line-by-line comparison of equivalent widths measured using spectra of the Sun and Kepler-11 gathered with the same instrumentation and in the same observing run. Thus, our approach minimizes possible systematic errors that could affect other analyses.
 
 Our revised stellar parameters securely place Kepler-11 in the solar twin category. This can be seen even by eye: as depicted in Figure \ref{fig:spec}, at high S/N Kepler-11's spectrum is nearly identical to the solar spectrum and distinctly different from that of HD1178, the star from our sample whose fundamental parameters most closely match those found by L13. In particular, the solar-like \logg\ for Kepler-11 implies that it is denser and less evolved than previously thought.
 
@@ -177,12 +177,14 @@ The lithium abundance of Kepler-11 was measured by synthesizing the Li I 6707.8 
 \label{fig:lithium}
 \end{figure}
 
+\vspace{8mm}
+
 
 \subsection{[Y/Mg] Abundance Ratio}
 
 Recent works by \citet{Nissen2015} and \citet{TucciMaia2016} have identified the ratio of yttrium to magnesium abundances as an excellent proxy for age in main-sequence Sun-like stars. We measured these abundances as described in Section \ref{s:abundances} and found a [Y/Mg] ratio of 0.04 $\pm$ 0.05 dex. Using the age relation from \citet{TucciMaia2016}, this gives an age of 4.0 $\pm$ 0.7 Gyr.
 
-\vspace{5mm}
+%\vspace{5mm}
 
 \subsection{Chromospheric Emission}
 
@@ -204,14 +206,13 @@ We find an activity index $\log(\mathrm{R'_{HK}})$ = -4.82. This is slightly hig
 \section{Stellar Abundances}
 \label{s:abundances}
 
-We measured photospheric abundances using the curve-of-growth technique for 20 other elements (excluding lithium, whose synthesis-based abundance determination is discussed in Section \ref{s:lithium}). As with the iron lines, all equivalent widths were measured by hand and line-by-line differential abundances determined with MOOG using $q^2$. The line list was adapted from previous works including \citet{Bedell2014}. For the element K, only one line was available, so it was measured multiple times and the deviation of the results was used as an error estimate; however, this uncertainty may be underestimated due to the line's location near a telluric-contaminated region. Hyperfine structure corrections were applied for Co I, Cu I, Mn I, V I, and Y II following \citet{Melendez2012}. Non-LTE corrections were applied for O I using grids from \citet{Ramirez2007}. Carbon abundances were measured by a combination of C I and CH lines; we note that the abundances for the two species are in tension at the $\sim$2$\sigma$ level for several of the stars in the sample, indicating that there may be some systematic effects at play. The measured equivalent widths are given in Table \ref{tbl:ews}, and resulting abundances for all stars are in Table \ref{tbl:abund}.  The quoted abundance errors include both the intrinsic scatter of the lines and the uncertainty propagated from errors on the stellar parameters.
+We measured photospheric abundances using the curve-of-growth technique for 20 other elements (excluding lithium, whose synthesis-based abundance determination is discussed in Section \ref{s:lithium}). As with the iron lines, all equivalent widths were measured by hand and line-by-line differential abundances determined with MOOG using $q^2$. The line list was adapted from previous works including \citet{Bedell2014}. For the element K, only one line was available, so it was measured multiple times and the deviation of the results was used as an error estimate; however, this uncertainty may be underestimated due to the line's location near a telluric-contaminated region. Hyperfine structure corrections were applied for Co I, Cu I, Mn I, V I, and Y II following \citet{Melendez2012}. Non-LTE corrections were applied for O I using grids from \citet{Ramirez2007}. Carbon abundances were measured by a combination of C I and CH lines; we note that the abundances for the two species are in tension at the $\sim$2$\sigma$ level for several of the stars in the sample, indicating that there may be some systematic effects at play. The measured equivalent widths are given in Table \ref{tbl:ews}, and resulting abundances for all stars are in Table \ref{tbl:abund}.  The quoted abundance errors include both the intrinsic scatter of the lines and the uncertainty propagated from errors on the stellar parameters. For subsequent analysis, all measured states of a given element (e.g. CI and CH, TiI and TiII, etc.) were combined with a weighted average to yield the overall elemental abundance.
 
 In Figure \ref{fig:xh}, we plot the abundances for all stars as a function of their measured metallicity. Thin- or thick-disk membership was assigned based on UVW kinematics using the procedure specified in \citet{Reddy2006}. Kepler-11 follows the abundance trends of the other thin-disk stars well and does not display a notable $\alpha$-element enrichment, despite its potentially thick-disk kinematics.
 
 
 Kepler-11's status as a solar twin enables direct comparison of its abundance pattern to that of the Sun and other known solar twins. Of particular interest is the question of trends in elemental abundances with condensation temperature (\tc). As shown by \citet{Melendez2009}, the solar abundance pattern is unusual in its depletion of refractory elements relative to volatiles. This depletion has been interpreted as ``missing'' rocky material that is locked up in the Solar System planets \citep{Chambers2010}. Building up the number of stars with precisely characterized abundance patterns and planetary systems can help to test this possibility.
 
-For this part of the analysis, all measured states of a given element (e.g. CI and CH, TiI and TiII, etc.) were combined with a weighted average to yield the overall elemental abundance. We note that for carbon the CI and CH estimates of its abundance are discrepant at the level of 1.6$\sigma$, which is likely a result of the small number of lines available for each state. 
 
 \begin{figure*}
 \centering
@@ -220,7 +221,7 @@ For this part of the analysis, all measured states of a given element (e.g. CI a
 \label{fig:tc}
 \end{figure*}
 
-We applied corrections for the effects of galactic chemical evolution (GCE), which can change the abundance patterns and \tc\ trends of stars at varying ages \citep{Nissen2015, Spina2016}. We corrected each abundance [X/H] using the prescription of \citet{Spina2016b}, who fit hyperbolic relations to [X/H] as a function of stellar age for a sample of solar twins. We then used the corrected abundances and \tc\ values from Table 8 of \citet{Lodders2003} to search for a trend.
+We applied corrections for the effects of galactic chemical evolution (GCE), which can change the abundance patterns and \tc\ trends of stars at varying ages \citep{Nissen2015, Spina2016}. We corrected each abundance [X/H] using the linear relationships found by \citet{Spina2016b}, who fit [X/H] as a function of stellar age for a sample of solar twins. We then used the corrected abundances and \tc\ values from Table 8 of \citet{Lodders2003} to search for a trend.
 
 The uncertainty on the trend of [X/H] with \tc\ was propagated using a bootstrap Monte Carlo method to account for multiple potential sources of error. Each abundance is uncertain due to the intrinsic scatter of abundances derived from different lines. This uncertainty increases when the GCE correction is applied, since the correction coefficients carry some degree of random error. Additionally, the slope of the \tc\ trend can be altered by errors on the fundamental stellar parameters used \citep[as seen in][]{Teske2015} and by the uncertainty on stellar age in the GCE correction. We account for all of these effects by running 10,000 bootstrap trials where the stellar parameters are resampled from their posterior distributions; the resulting abundances are randomized by drawing samples from the multiple measured lines; the age is determined based on the resampled stellar parameters; and the GCE correction is applied using coefficients that have been randomly sampled from the (assumed Gaussian) uncertainties given in \citet{Spina2016b}. The resulting distribution of \tc\ trend fits gives a slope of [X/H] vs \tc\ of $(-4.6^{+7.9}_{-8.7}) \times 10^{-6}$ dex K$^{-1}$ (Figure  \ref{fig:tc}). In short, the trend of Kepler-11's abundances with \tc\ is indistinguishable from the solar pattern, albeit with a large degree of uncertainty due to the many sources of error which come into play when considering GCE effects.
 
@@ -240,6 +241,7 @@ We ran two DEMCMCs to model the data. One had no constraints on the stellar radi
 
 The best fit solution from $\mathcal{NSI}$ run has a lower $\chi^2$ value by more than 40 compared to the best-fit $\mathcal{FSP}$ run. Thus we see that fixing the stellar parameters at their spectroscopically measured values causes the fit to the \Kepler data to become significantly worse; the p-value for such an increase in $\chi^2$ is on order $10^{-9}$. This confirms the existence of tension between the transit measured stellar density and the spectroscopically measured one. 
 
+\vspace{8mm}
 
 \subsection{Physical Interpretation}
 
@@ -336,7 +338,8 @@ The authors wish to recognize and acknowledge the very significant cultural role
 M.B. is supported by a National Science Foundation Graduate Research Fellowship under Grant No. DGE-1144082.  J.L.B. acknowledges support for this work from the NSF (grant number AST-1313119) and the Packard Foundation.  J.M. thanks FAPESP (2012/24392-2). M.A., D.Y., and F.L. have been supported by the Australian Research Council
 (grants FL110100012, DP120100991 and FT140100554).}
 
-{\it Facilities:} \facility{Keck:I (HIRES)}, \facility{Kepler}
+\facilities{Keck:I (HIRES), Kepler}
+%\software{IRAF, MAKEE, q2}
 
 
 \bibliographystyle{apj}

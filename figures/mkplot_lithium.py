@@ -14,7 +14,7 @@ spec_wave, spec = np.loadtxt(spec_file, unpack=True)
 sun_wave, sun_spec = np.loadtxt(sun_file, unpack=True)
 synth_wave, synth = np.loadtxt(synth_file, unpack=True, skiprows=2)
 synth_wave, sun_synth = np.loadtxt(sun_synth_file, unpack=True, skiprows=2)
-wave_factor = 0.003 # wavelength shift = second-to-last number on second-to-last line of synth pars
+wave_factor = 0.00 # wavelength shift = second-to-last number on second-to-last line of synth pars
 c_factor = 1.0205 # continuum factor = last number on second-to-last line of synth pars
 
 c1 = 'black'
