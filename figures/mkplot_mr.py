@@ -76,14 +76,22 @@ plt.text(20.5,1.6,r'Mercury-like',color='#467821',size=22)
 
 
 K11_name = np.asarray(['K-11 b','K-11 c','K-11 d','K-11 e','K-11 f'])
-K11_mass_ttv = np.asarray([1.9,2.9,7.3,8.0,2.0])
-K11_massupper =np.asarray([1.4,2.9,0.8,1.5,0.8])
-K11_masslower = np.asarray([1.0,1.6,1.5,2.1,0.9])
-K11_r_ttv = np.asarray([1.8,2.87,3.12,4.19,2.49])
-K11_rupper = np.asarray([.03,.05,.06,.07,.04])
-K11_rlower = np.asarray([.05,.06,.07,.09,.07])
-K11_mass_spec = K11_mass_ttv * 1.04/0.961
-K11_r_spec = K11_r_ttv * 1.008/1.065
+#K11_mass_ttv = np.asarray([1.9,2.9,7.3,8.0,2.0])
+#K11_massupper =np.asarray([1.4,2.9,0.8,1.5,0.8])
+#K11_masslower = np.asarray([1.0,1.6,1.5,2.1,0.9])
+#K11_r_ttv = np.asarray([1.8,2.87,3.12,4.19,2.49])
+#K11_rupper = np.asarray([.03,.05,.06,.07,.04])
+#K11_rlower = np.asarray([.05,.06,.07,.09,.07])
+#K11_mass_spec = K11_mass_ttv * 1.04/0.961
+#K11_r_spec = K11_r_ttv * 1.008/1.065
+K11_mass_ttv = np.asarray([2.78,5.0,8.13,9.48,2.53])
+K11_massupper =np.asarray([0.64,1.3,0.67,0.86,0.49])
+K11_masslower = np.asarray([0.66,1.35,0.66,0.88,0.45])
+K11_r_ttv = np.asarray([1.83,2.89,3.21,4.26,2.54]) * 1.008
+K11_rupper = np.asarray([.07,.12,.12,.16,.10])
+K11_rlower = np.asarray([.04,.04,.04,.07,.04])
+K11_mass_spec = np.asarray([2.83,5.05,7.52,8.37,1.59])
+K11_r_spec = np.asarray([1.71,2.694,3.00,3.947,2.356])
 
 c1 = '#003399'
 c2 = '#CC0033'
