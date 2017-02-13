@@ -16,7 +16,7 @@ def xh_err(el_name, data):
 
 if __name__ == "__main__":
 
-    a = genfromtxt('../data/K11_abundances_err.csv', delimiter=',', dtype=None, names=True)
+    a = genfromtxt('../data/K11_abundances_err_nlte.csv', delimiter=',', dtype=None, names=True)
 
     a['e_KI_1'] *= np.sqrt(2)  # adjust for the duplicate potassium lines  
 
