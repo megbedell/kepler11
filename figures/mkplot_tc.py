@@ -26,6 +26,16 @@ def xh(el_name, data):
 def xh_err(el_name, data):
     err = a['e_'+el_name+'_1'][1:]
     return err
+    
+def onesigma_region(x_all, slopes, intercepts):
+    y_lo, y_med, y_hi = np.empty(len(x_all)), np.empty(len(x_all)), np.empty(len(x_all))
+    for i,x in enumerate(x_all):
+        sample = linear(x, slopes, intercepts)
+        y_lo[i] = np.percentile(sample,16)
+        y_med[i] = np.percentile(sample,50)
+        y_hi[i] = np.percentile(sample,84)
+    return y_lo, y_med, y_hi
+    
 
 if __name__ == "__main__":
     
@@ -46,6 +56,8 @@ if __name__ == "__main__":
     #sp.errors = True
     #q2.specpars.solve_one(K11, sp, Ref=sun)
     q2.abundances.one(K11, Ref=sun, silent=True, errors=False) 
+    
+    K11.OI['difab'] = np.array([ 0.053,  0.048,  0.028])  # manually apply NLTE corrections
     
     matplotlib.rcParams['xtick.labelsize'] = 20
     matplotlib.rcParams['ytick.labelsize'] = 20
@@ -85,7 +97,7 @@ if __name__ == "__main__":
     
     
     # with GCE:
-    abund_linear, err, Tc = q2.gce.correct(K11, age=2.7, method='linear', silent=False)
+    abund_linear, err, Tc = q2.gce.correct(K11, age=3.2, method='linear', silent=False)
     # exclude K:
     #abund_linear = np.delete(abund_linear, 7)
     #err = np.delete(err, 7)
@@ -93,7 +105,9 @@ if __name__ == "__main__":
     #abund_linear[7] -= 0.019  # LTE correction
     err[7] *= np.sqrt(2)
     
-    
+    # get error bars with propogated age uncertainties:
+    _, _, err2, _, _ = np.loadtxt('../data/tc_medianabund.txt', unpack=True)
+    err = np.insert(err2, 7, err[7]) # insert KI
     
     
     ax = fig.add_subplot(1, 2, 2)
@@ -111,15 +125,8 @@ if __name__ == "__main__":
     
     
     ages, slopes, intercepts = np.loadtxt('../data/tcfit_msboot.txt', unpack=True)
-    slope_lo = np.percentile(slopes,16)
-    slope_med = np.median(slopes)
-    slope_hi = np.percentile(slopes,84)
-    int_lo = np.percentile(intercepts,16)
-    int_med = np.median(intercepts)
-    int_hi = np.percentile(intercepts,84)
-    
-    plt.fill_between(x_all,linear(x_all, slope_hi, int_lo), linear(x_all, slope_lo, int_hi),\
-        color=c1,alpha=0.2) # ASSUMES PERFECT ANTI-CORRELATION
+    y_lo, y_med, y_hi = onesigma_region(x_all, slopes, intercepts)    
+    plt.fill_between(x_all, y_lo, y_hi, color=c1,alpha=0.2)
     
     '''''   
     rand = np.random.randint(0,high=len(slopes),size=500)
@@ -130,7 +137,7 @@ if __name__ == "__main__":
     
 
     ax.errorbar(Tc,abund_linear,yerr=err,color=c1,mec=c1,fmt='o',markersize=10)
-    ax.plot(x_all, linear(x_all, slope_med, int_med), color=c1, linewidth=2)
+    ax.plot(x_all, y_med, color=c1, linewidth=2)
     
     #popt, pcov = curve_fit(linear, Tc, abund_linear, sigma=err, absolute_sigma=True)
     #plt.plot(x_all, linear(x_all, popt[0], popt[1]), color=c2, linewidth=2)
