@@ -143,7 +143,11 @@ The resulting stellar parameters for all observed stars are given in Table \ref{
 
 Our revised stellar parameters securely place Kepler-11 in the solar twin category. This can be seen even by eye: as depicted in Figure \ref{fig:spec}, at high S/N Kepler-11's spectrum is nearly identical to the solar spectrum and distinctly different from that of HD1178, the star from our sample whose fundamental parameters most closely match those found by L13. In particular, the solar-like \logg\ for Kepler-11 implies that it is denser and less evolved than previously thought.
 
-We used stellar evolutionary models to estimate the mass, radius, and age of Kepler-11. Yonsei-Yale isochrones were fit using $q^2$ (Figure \ref{fig:isochrones}). We also applied Dartmouth and Basti isochrones using the \textit{isochrones} python package \citep{Morton2015}. All three models gave results consistent within 1$\sigma$. From these fits, we estimate a stellar mass $M_{\star} = 1.040 \pm 0.006 M_{\odot}$, radius $R_{\star} = 1.008 \pm 0.024 R_{\odot}$, and age $3.2 \pm 0.8$ Gyr. This gives a stellar density $\rho_{\star} = 1.43 \pm 0.10$ \gcm, or 1.01 $\pm$ 0.07 $\rho_{\odot}$.  % numbers given are Dartmouth results
+We used stellar evolutionary models to estimate the mass, radius, and age of Kepler-11. Yonsei-Yale isochrones were fit using $q^2$ \added{\citep{YY2004}. \replaced{We also applied Dartmouth and Basti isochrones using the \textit{isochrones} python package \citep{Morton2015}. All three models gave results consistent within 1$\sigma$. From these fits, we estimate a stellar mass $M_{\star} = 1.040 \pm 0.006 M_{\odot}$, radius $R_{\star} = 1.008 \pm 0.024 R_{\odot}$, and age $3.2 \pm 0.8$ Gyr. This gives a stellar density $\rho_{\star} = 1.43 \pm 0.10$ \gcm, or 1.01 $\pm$ 0.07 $\rho_{\odot}$.}{We applied an \feh\ offset of 0.04 dex to align the isochrone grid with the solar values, as discussed in \citet{Melendez2012}}. From this, we estimate a stellar mass $M_{\star} = 1.042 \pm 0.005 M_{\odot}$, radius $R_{\star} = 1.021 \pm 0.025 R_{\odot}$, and age $3.2 \pm 0.9$ Gyr (Figure \ref{fig:isochrones}). This gives a stellar density $\rho_{\star} = 1.38 \pm 0.10$ \gcm, or 1.00 $\pm$ 0.07 $\rho_{\odot}$.}
+
+\added{Given the difficulty of inferring a stellar mass and radius to percent-level precision, it is worth looking deeper into the above-quoted estimates. We note that as a solar twin, Kepler-11 is located close to the anchor point of solar-calibrated isochrone grids, so such high precision is not unreasonable. As one test, we applied Dartmouth isochrones using the \textit{isochrones} python package \citep{Dotter2008, Morton2015}. The Dartmouth models give $M_{\star} = 1.036 \pm 0.006 M_{\odot}$, $R_{\star} = 1.015 \pm 0.022 R_{\odot}$, age $3.4 \pm 0.8$ Gyr, and density 0.99 $\pm$ 0.07 $\rho_{\odot}$, in excellent agreement with the Yonsei-Yale values. While systematic errors may be introduced from differing helium abundance and/or age-dependent gravitational settling effects, the proximity of Kepler-11's stellar parameters and abundances to the solar values should minimize these effects. Additionally, the Yonsei-Yale grid accounts for changes in helium abundances with a metallicity-dependent scaling factor.}
+
+
 
 \begin{figure}
 \centering
@@ -163,7 +167,7 @@ We used stellar evolutionary models to estimate the mass, radius, and age of Kep
 \section{Alternative Stellar Age Indicators}
 \label{s:ages}
 
-\deleted{While mass, radius, and density cannot be measured through methods other than the stellar spectrum, stellar age has multiple known proxies.} We used several alternate methods to measure the age of Kepler-11 as an independent test of its evolutionary state. The results unanimously agree upon a sub-solar age for Kepler-11. Details of the methods used follow.
+\deleted{While mass, radius, and density cannot be measured through methods other than the stellar spectrum, stellar age has multiple known proxies.} \added{In addition to isochrones,} we used several alternate methods to measure the age of Kepler-11 as an independent test of its evolutionary state. The results unanimously agree upon a sub-solar age for Kepler-11. Details of the methods used follow.
 
 \subsection{Stellar Rotation}
 
