@@ -105,7 +105,7 @@ if __name__ == "__main__":
     #abund_linear[7] -= 0.019  # LTE correction
     err[7] *= np.sqrt(2)
     
-    # get error bars with propogated age uncertainties:
+    # get error bars with propagated age uncertainties:
     _, _, err2, _, _ = np.loadtxt('../data/tc_medianabund.txt', unpack=True)
     err = np.insert(err2, 7, err[7]) # insert KI
     

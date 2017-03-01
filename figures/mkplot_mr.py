@@ -90,8 +90,8 @@ K11_masslower = np.asarray([0.66,1.35,0.66,0.88,0.45])
 K11_r_ttv = np.asarray([1.83,2.89,3.21,4.26,2.54]) * 1.008
 K11_rupper = np.asarray([.07,.12,.12,.16,.10])
 K11_rlower = np.asarray([.04,.04,.04,.07,.04])
-K11_mass_spec = K11_mass_ttv * 1.04/0.961
-K11_r_spec = K11_r_ttv * 1.008/1.065
+K11_mass_spec = K11_mass_ttv * 1.042/0.961
+K11_r_spec = K11_r_ttv * 1.021/1.065
 #K11_mass_spec = np.asarray([2.83,5.05,7.52,8.37,1.59])
 #K11_r_spec = np.asarray([1.71,2.694,3.00,3.947,2.356])
 
