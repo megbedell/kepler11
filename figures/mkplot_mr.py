@@ -76,30 +76,26 @@ plt.text(20.5,1.6,r'Mercury-like',color='#467821',size=22)
 
 
 K11_name = np.asarray(['K-11 b','K-11 c','K-11 d','K-11 e','K-11 f'])
-#K11_mass_ttv = np.asarray([1.9,2.9,7.3,8.0,2.0])
-#K11_massupper =np.asarray([1.4,2.9,0.8,1.5,0.8])
-#K11_masslower = np.asarray([1.0,1.6,1.5,2.1,0.9])
-#K11_r_ttv = np.asarray([1.8,2.87,3.12,4.19,2.49])
-#K11_rupper = np.asarray([.03,.05,.06,.07,.04])
-#K11_rlower = np.asarray([.05,.06,.07,.09,.07])
-#K11_mass_spec = K11_mass_ttv * 1.04/0.961
-#K11_r_spec = K11_r_ttv * 1.008/1.065
-K11_mass_ttv = np.asarray([2.78,5.0,8.13,9.48,2.53])
-K11_massupper =np.asarray([0.64,1.3,0.67,0.86,0.49])
-K11_masslower = np.asarray([0.66,1.35,0.66,0.88,0.45])
-K11_r_ttv = np.asarray([1.83,2.89,3.21,4.26,2.54]) * 1.008
-K11_rupper = np.asarray([.07,.12,.12,.16,.10])
-K11_rlower = np.asarray([.04,.04,.04,.07,.04])
-K11_mass_spec = K11_mass_ttv * 1.042/0.961
-K11_r_spec = K11_r_ttv * 1.021/1.065
-#K11_mass_spec = np.asarray([2.83,5.05,7.52,8.37,1.59])
-#K11_r_spec = np.asarray([1.71,2.694,3.00,3.947,2.356])
+K11_mass_ours = np.asarray([2.78,5.00,8.13,9.48,2.53])
+K11_massupper_ours =np.asarray([0.64,1.3,0.67,0.86,0.49])
+K11_masslower_ours = np.asarray([0.66,1.35,0.66,0.88,0.45])
+K11_r_ours = np.asarray([1.83,2.89,3.21,4.26,2.54]) * 1.02/1.07
+K11_rupper_ours = np.asarray([.07,.12,.12,.16,.10]) * 1.02/1.07
+K11_rlower_ours = np.asarray([.04,.04,.04,.07,.04]) * 1.02/1.07
+K11_mass_L13 = np.asarray([1.9,2.9,7.3,8.0,2.0])
+K11_massupper_L13 =np.asarray([1.4,2.9,0.8,1.5,0.8])
+K11_masslower_L13 = np.asarray([1.0,1.6,1.5,2.1,0.9])
+K11_r_L13 = np.asarray([1.8,2.87,3.12,4.19,2.49])
+K11_rupper_L13 = np.asarray([.03,.05,.06,.07,.04])
+K11_rlower_L13 = np.asarray([.05,.06,.07,.09,.07])
 
 c1 = '#003399'
 c2 = '#CC0033'
 
-plt.errorbar(K11_mass_ttv,K11_r_ttv, xerr=[K11_masslower,K11_massupper], yerr=[K11_rlower,K11_rupper], lw=2.5, color=c1, capsize=5, capthick=2.5, fmt='o', markersize=7, label='TTV')
-plt.errorbar(K11_mass_spec,K11_r_spec, xerr=[K11_masslower,K11_massupper], yerr=[K11_rlower,K11_rupper], lw=2.5, color=c2, capsize=5, capthick=2.5, fmt='o', markersize=7, label='spectroscopic')
+plt.errorbar(K11_mass_L13,K11_r_L13, xerr=[K11_masslower_L13,K11_massupper_L13], 
+    yerr=[K11_rlower_L13,K11_rupper_L13], lw=2.5, color=c1, capsize=5, capthick=2.5, fmt='o', markersize=7, label='L13')
+plt.errorbar(K11_mass_ours,K11_r_ours, xerr=[K11_masslower_ours,K11_massupper_ours], 
+    yerr=[K11_rlower_ours,K11_rupper_ours], lw=2.5, color=c2, capsize=5, capthick=2.5, fmt='o', markersize=7, label='This work')
 
 
 plt.xlabel(r'Mass ($M_{\oplus}$)', size=24) 
@@ -115,6 +111,12 @@ ax = plt.gca()
 majorFormatter = FormatStrFormatter('%d')
 ax.xaxis.set_major_formatter(majorFormatter)
 
-plt.legend(numpoints=1,loc='upper left',prop={'size':24})
+legend = plt.legend(numpoints=1,loc='upper left',prop={'size':24})
+legend.get_frame().set_edgecolor('black')
 
 plt.savefig('K11_massradius.pdf',bbox_inches='tight')
+
+K11_rho_L13 = K11_mass_L13/K11_r_L13**3
+K11_rho_ours = K11_mass_ours/K11_r_ours**3
+print "Planet bulk density percentage change:"
+print (K11_rho_ours - K11_rho_L13)/K11_rho_L13 * 100.

@@ -34,7 +34,9 @@ ax.set_xlabel(r'Stellar Density (g cm$^{-3}$)',size=28)
 #plt.text(1.122,0.9,'L13 result',ha='center',size=24)
 plt.errorbar([1.122],[4.0], xerr=[[0.060],[0.049]], lw=3, color=c1, capsize=5, capthick=3, fmt='o', markersize=9, label='Lissauer+2013')
 
-ax.legend(loc='upper left',prop={'size':24}, numpoints=1)
+legend = ax.legend(loc='upper left',prop={'size':24}, numpoints=1)
+legend.get_frame().set_edgecolor('black')
+
 plt.xlim([0.7,1.8])
 
 plt.savefig('density.pdf')

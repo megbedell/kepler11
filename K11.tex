@@ -68,7 +68,7 @@ S\~{a}o Paulo, Rua do Mat\~{a}o 1226, Cidade Universit\'{a}ria, 05508-900 S\~{a}
 
 \begin{abstract}
 
-The six planets of the Kepler-11 system are the archetypal example of a population of surprisingly low-density transiting planets revealed by the \Kepler mission. We have determined the fundamental parameters and chemical composition of the Kepler-11 host star to unprecedented precision using an extremely high quality spectrum from Keck-HIRES (R$\simeq$67,000, S/N per pixel$\simeq$260 at 600 nm). Contrary to previously published results, our spectroscopic constraints indicate that Kepler-11 is a young main-sequence solar twin. The revised stellar parameters raise the densities of the Kepler-11 planets by about \replaced{30\%}{25\%}, making them more typical of the emerging class of ``puffy'' close-in exoplanets. We obtain photospheric abundances of 22 elements and find that Kepler-11 has an abundance pattern similar to that of the Sun \added{with a slightly higher overall metallicity}. We additionally analyze the \Kepler lightcurves using a photodynamical model and discuss the tension between spectroscopic and transit/TTV-based stellar density estimates.
+The six planets of the Kepler-11 system are the archetypal example of a population of surprisingly low-density transiting planets revealed by the \Kepler mission. We have determined the fundamental parameters and chemical composition of the Kepler-11 host star to unprecedented precision using an extremely high quality spectrum from Keck-HIRES (R$\simeq$67,000, S/N per pixel$\simeq$260 at 600 nm). Contrary to previously published results, our spectroscopic constraints indicate that Kepler-11 is a young main-sequence solar twin. The revised stellar parameters raise the densities of the Kepler-11 planets by \replaced{about 30\%}{between 20-95\% per planet}, making them more typical of the emerging class of ``puffy'' close-in exoplanets. We obtain photospheric abundances of 22 elements and find that Kepler-11 has an abundance pattern similar to that of the Sun \added{with a slightly higher overall metallicity}. We additionally analyze the \Kepler lightcurves using a photodynamical model and discuss the tension between spectroscopic and transit/TTV-based stellar density estimates.
 
 \end{abstract}
 
@@ -133,7 +133,7 @@ http://www.astro.caltech.edu/~tb/makee/}} All Kepler-11 spectra were then co-add
 \label{s:characterization}
 
 
-The fundamental properties of Kepler-11 and its potential twins were derived from an equivalent width analysis. We manually measured 94 Fe I and 17 Fe II spectral lines using IRAF's \textit{splot}. The line list used unblended and unsaturated iron lines adapted from previous works such as \citet{Ramirez2014}. Laboratory values for transition probability were adopted where available, but for this strictly differential analysis the values of log \textit{gf} are largely irrelevant, since they cancel out for all lines in the linear region of the curve-of-growth. Equivalent widths were measured by carefully choosing local continua as described in \citet{Bedell2014} to maximize differential precision between the spectra. The full line list and measured equivalent widths are available in Table \ref{tbl:ews}.
+The fundamental properties of Kepler-11 and its potential twins were derived from an equivalent width analysis. We manually measured 94 Fe I and 17 Fe II spectral lines using IRAF's \textit{splot}. The line list used unblended and unsaturated iron lines adapted from previous works such as \citet{Ramirez2014}. Laboratory values for transition probability were adopted where available, but for this strictly differential analysis the values of log \textit{gf} are largely irrelevant, since they cancel out for all lines in the linear region of the curve-of-growth. Equivalent widths were measured by carefully choosing local continua as described in \citet{Bedell2014} to maximize differential precision between the spectra. The full line list and measured equivalent widths are available in Table \ref{tbl:ews}. \added{Since our method depends on hand-measuring equivalent widths with the exact same choices made for target and reference spectra, we always use solar equivalent widths measured at the same time as the target stars. Since a few of the potential twin stars (HD10145, HD21727, and HD191069) were measured at a different time than the others, a second column of solar equivalent widths is given as a reference for those three stars only.}
 
 The stellar effective temperature \teff, surface gravity \logg, metallicity \mh, and microturbulence $v_t$ were determined by imposing a set of requirements on the iron abundances derived by MOOG \citep{Sneden1973}. Namely, we required the \feh\ abundances from both ionization states to be equal, and any trends in iron abundance with the excitation potential or reduced equivalent width of the lines to be minimized. As the most readily observable abundant metal in the photosphere, we used iron abundance \feh\ as a direct proxy for metallicity \mh. It is important to note that we exclusively used the \textit{differential} abundance measurements relative to the solar spectrum for this analysis. By directly comparing line-by-line differential abundances of spectrally similar stars, we minimize the influence of stellar model systematics on the final parameters and abundances \citep[see e.g.][]{Ramirez2014}. 
 
@@ -250,7 +250,7 @@ The uncertainty on the trend of [X/H] with \tc\ was propagated using a bootstrap
 
 In order to reassess the stellar density constraint based on the transit data, we performed a photodynamical fit to the full \Kepler short cadence (58.8 second exposure) data set. The model integrates the 7-body Newtonian equations of motions for the central star and six planets, including the light--travel--time effect. When the planets pass between the star and the line of sight, a synthetic light curve is generated \citep{2012MNRAS.420.1630P}, which can then be compared to the data. This approach therefore takes into account all transit-timing variations, simultaneously constraining planet masses, eccentricities, and radii. To prepare the data for fitting, we detrended the data with a cubic polynomial with a 2880 minute (2 day) width every 100 points, and interpolated for points between. We divided the flux by this fit as a baseline to generate our data set of 1746779 points. We additionally multiplied the uncertainties given by \Kepler by a factor of 1.115318 so that the reduced $\chi^2$ of a fiducial model was 1.0. This broadens our posteriors and helps take into account unmodeled noise in the data. To simultaneously generate the posteriors on all of our model parameters, we ran differential evolution Markov chain Monte Carlo \cite[DEMCMC, ][]{TerBraak2005} fits with planetary parameters $\{P,\, T_0,\, e^{1/2} \, \cos(\omega),\, e^{1/2} \, \sin(\omega),\, i,\, \Omega,\, R_\mathrm{p}/R_\star,\, M_\mathrm{p}/M_\star\}$ for all planets, where $P$ is the period, $T_0$ is the mid-transit time, $e$ is eccentricity, $\omega$ is the argument of periapse, $i$ is inclination, $\Omega$ is nodal angle, and $R$ and $M$ are radius and mass, respectively (with subscripts p $=$ b, c, d, e, f, g for the planets and $\star$ for the star). The star has five additional parameters: $\{M_\star,\, R_\star,\, c_1,\, c_2,\, dilute\}$, where $\{c_i\}$ are the two quadratic limb-darkening coefficients and $dilute$ is the amount of dilution from other nearby sources. We used eccentricity vector components scaling as $e^{1/2}$ so that we get flat priors in total $e$, and fixed the values of $dilute=0$ since there is no evidence of other nearby stars diluting the lightcurve. We also fixed the value of $M_\star$, as transits alone generally only give information about the density of the star, rather than $M_\star$ and $R_\star$ individually. We fixed $\Omega = 0$ for all planets because the data are not precise enough to constrain these values \citep{Migaszewski2012}. Additionally, it is extremely unlikely that there are large mutual inclinations among the planets given that we see six transiting planets (L11, Figure 4), five of which are dynamically packed and thus have no misaligned non-transiting planets between them (L11). We used flat priors for all other parameters.
 
-We ran two DEMCMCs to model the data. One had no constraints on the stellar radius, i.e., allowed the transits themselves to completely determine the stellar density, which we will label $\mathcal{NSI}$ for ``No Spectral Information.'' The second DEMCMC was run with the stellar mass and radius fixed at the spectroscopically measured values in this study, $M_\star=1.04M_\odot$ and $R_\star=1.00M_\odot$, which we will label $\mathcal{FSP}$ for ``Fixed Stellar Parameters.'' The $\mathcal{NSI}$ run produces a lower density star $\rho_\star = 1.191^{+0.043}_{-0.11}$ g cm$^{-3}$ than the fixed value of $\rho_\star = 1.466$ g cm$^{-3}$ in $\mathcal{FSP}$. This indicates that the transit data alone are discrepant with the spectroscopically measured stellar density. Table~\ref{table:den} shows the density results for all bodies for both DEMCMC runs. We note that the densities of planets with no spectral information, $\mathcal{NSI}$, are slightly higher than reported in L13 because that study includes the lower spectroscopically measured stellar density in their final best fits.
+We ran two DEMCMCs to model the data. One had no constraints on the stellar radius, i.e., allowed the transits themselves to completely determine the stellar density, which we will label $\mathcal{NSI}$ for ``No Spectral Information.'' The second DEMCMC was run with the stellar mass and radius fixed at the spectroscopically measured values in this study, $M_\star=1.04M_\odot$ and $R_\star=1.00M_\odot$, which we will label $\mathcal{FSP}$ for ``Fixed Stellar Parameters.'' The $\mathcal{NSI}$ run produces a lower density star $\rho_\star = 1.191^{+0.043}_{-0.11}$ g cm$^{-3}$ than the fixed value of $\rho_\star = 1.466$ g cm$^{-3}$ in $\mathcal{FSP}$. This indicates that the transit data alone are discrepant with the spectroscopically measured stellar density. Table~\ref{table:den} shows the \added{mass, radius, and} density results for all bodies for both DEMCMC runs. We note that the densities of planets with no spectral information, $\mathcal{NSI}$, are slightly higher than reported in L13 because that study includes the lower spectroscopically measured stellar density in their final best fits.
 
 The best fit solution from $\mathcal{NSI}$ run has a lower $\chi^2$ value by more than 40 compared to the best-fit $\mathcal{FSP}$ run. Thus we see that fixing the stellar parameters at their spectroscopically measured values causes the fit to the \Kepler data to become significantly worse; the p-value for such an increase in $\chi^2$ is on order $10^{-9}$. This confirms the existence of tension between the transit measured stellar density and the spectroscopically measured one. 
 
@@ -270,7 +270,7 @@ We also consider the effects of potential star spot crossing changing the appare
 
 
 \begin{table*}
-\caption{Star and Planet Densities}
+\caption{Star and Planet Properties}
 \label{table:den}
 \centering 
 \begin{tabular}{l | c c c | c c c} 
@@ -278,14 +278,14 @@ We also consider the effects of potential star spot crossing changing the appare
  & & $\mathcal{NSI}$ & & & $\mathcal{FSP}$ &  \\
 Body & Mass (M$_\Earth$) & Radius (R$_\Earth$) & Density (g cm$^{-3}$) & Mass (M$_\Earth$) & Radius (R$_\Earth$) & Density (g cm$^{-3}$) \\
 \hline
-Kepler-11 b & $2.78^{+0.64}_{-0.66}$ & $1.83^{+0.07}_{-0.04} $ & $2.45^{+0.63}_{-0.62} $ & $2.83^{+0.62}_{-0.66}$ & $1.71^{+0.02}_{-0.02}$ & $ 3.15^{+0.70}_{-0.74} $  \\
-Kepler-11 c & $5.00^{+1.30}_{-1.35}$ & $2.89^{+0.12}_{-0.04}$ & $1.11^{+0.32}_{-0.32}$ & $5.05^{+1.19}_{-1.37}$ & $2.694^{+0.019}_{-0.019}$ & $ 1.43^{+0.34}_{-0.39} $ \\
-Kepler-11 d & $8.13^{+0.67}_{-0.66}$ & $3.21^{+0.12}_{-0.04}$ & $ 1.33^{+0.14}_{-0.15} $ & $7.52^{+0.68}_{-0.68}$ & $3.000^{+0.017}_{-0.017}$ & $ 1.54^{+0.14}_{-0.14} $ \\
-Kepler-11 e & $9.48^{+0.86}_{-0.88}$ & $4.26^{+0.16}_{-0.07}$ &  $ 0.664^{+0.079}_{-0.087} $ & $8.37^{+1.01}_{-1.04}$ & $3.947^{+0.024}_{-0.024}$ & $ 0.750^{+0.091}_{-0.093} $ \\
-Kepler-11 f & $2.53^{+0.49}_{-0.45}$ & $2.54^{+0.10}_{-0.04}$ & $ 0.83^{+0.18}_{-0.16} $  & $1.59^{+0.58}_{-0.54}$ & $2.356^{+0.028}_{-0.028}$ & $ 0.67^{+0.24}_{-0.23} $  \\
-Kepler-11 g & $ <  27$ & $3.33^{+0.26}_{-0.09}$ & $ <  4 $ & $<  29$ & $3.099^{+0.027}_{-0.026}$ & $ < 5 $\\
+Kepler-11 b & $2.78^{+0.64}_{-0.66}$ & $1.83^{+0.07}_{-0.04} $ & $2.45^{+0.63}_{-0.62} $ & $2.83^{+0.62}_{-0.66}$ & $1.74^{+0.02}_{-0.02}$ & $ 2.96^{+0.66}_{-0.70} $  \\
+Kepler-11 c & $5.00^{+1.30}_{-1.35}$ & $2.89^{+0.12}_{-0.04}$ & $1.11^{+0.32}_{-0.32}$ & $5.05^{+1.19}_{-1.37}$ & $2.75^{+0.02}_{-0.02}$ & $ 1.34^{+0.32}_{-0.36} $ \\
+Kepler-11 d & $8.13^{+0.67}_{-0.66}$ & $3.21^{+0.12}_{-0.04}$ & $ 1.33^{+0.14}_{-0.15} $ & $7.52^{+0.68}_{-0.68}$ & $3.06^{+0.02}_{-0.02}$ & $ 1.45^{+0.13}_{-0.13} $ \\
+Kepler-11 e & $9.48^{+0.86}_{-0.88}$ & $4.26^{+0.16}_{-0.07}$ &  $ 0.66^{+0.08}_{-0.09} $ & $8.37^{+1.01}_{-1.04}$ & $4.03^{+0.02}_{-0.03}$ & $ 0.71^{+0.09}_{-0.09} $ \\
+Kepler-11 f & $2.53^{+0.49}_{-0.45}$ & $2.54^{+0.10}_{-0.04}$ & $ 0.83^{+0.18}_{-0.16} $  & $1.59^{+0.58}_{-0.54}$ & $2.40^{+0.03}_{-0.03}$ & $ 0.63^{+0.23}_{-0.21} $  \\
+Kepler-11 g & $ <  27$ & $3.33^{+0.26}_{-0.09}$ & $ <  4 $ & $<  29$ & $3.16^{+0.03}_{-0.03}$ & $ < 5 $\\
 \hline    
-Kepler-11  & & $\rho_{\star} = 1.194^{+0.042}_{-0.11} $ g cm$^{-3}$  & & & $\rho_{\star} = 1.466 $ g cm$^{-3}$ (fixed) & \\
+Kepler-11  & 1.04 $M_{\odot}$ (fixed) & $1.07^{+0.04}_{-0.01}$ $R_{\odot}$ & $1.19^{+0.04}_{-0.11}$  & 1.04 $M_{\odot}$ (fixed) & 1.02 $R_{\odot}$ (fixed) & 1.38 (fixed) \\
 \hline   
 \end{tabular}
 \tablecomments{Medians and 1-$\sigma$ uncertainties from the DEMCMC runs as described in \S~\ref{s:ttvs}}
@@ -317,10 +317,13 @@ The final effect is blending of unresolved background sources, which can cause s
 We are left with no obvious culprit for the discrepancy between the stellar densities measured from spectroscopic characterization and lightcurve modeling. Similar testing for other systems with measured TTVs is an important next step in determining whether this is a one-off event due to, e.g. underestimated uncertainties of stellar properties or unexpected stellar activity in the lightcurve, or if it is a systematic difference between these independent methods of analysis. \replaced{If this is a systematic effect, it may be linked to the putative planet density underestimation problem in the TTV community \citep{Weiss2014}.}{If this is a systematic effect, it may be linked to the mass underestimation problem in TTV measurements relative to RVs found by \citet{Weiss2014}.}
 
 \subsection{Implications for the Planets}
+\label{s:planetprop}
 
-The adopted mass and radius of Kepler-11 has considerable repercussions for its planetary system. We can approximate the planet mass derived from TTVs as a linear function of the assumed stellar mass. The planet radius also has a linear dependence on stellar radius, since only the relative surface areas of planet and star can be measured by the transit depth. The stellar properties obtained through spectroscopic analysis therefore raise the planet masses \replaced{by a factor of 8\% and lower the planet radii by a factor of 5\%}{by 8\% and lower the planet radii by 5\%} relative to the transit and TTV-derived values. The results are shown in Figure \ref{fig:mr}.
+The adopted mass and radius of Kepler-11 has considerable repercussions for its planetary system. We can approximate the planet mass derived from TTVs as a linear function of the assumed stellar mass. The planet radius also has a linear dependence on stellar radius, since only the relative surface areas of planet and star can be measured by the transit depth. \added{As shown in Table \ref{table:den}, fixing the stellar parameters at the spectroscopic values results in substantial changes in the planet properties which do not always follow the expected linear behavior. Because the $\mathcal{FSP}$ run did not yield a well-fitting result, as discussed in Section \ref{s:ttvs}, we do not recommend adopting these values for the planet parameters. Instead, we use the well-fitting $\mathcal{NSI}$ results and scale the planet radii to the correct stellar values by multiplying by 0.95.}
 
-Adopting the stellar properties from spectroscopic analysis raises the mean densities of the Kepler-11 planets by $\sim$\replaced{30\%}{25\%}. These increased densities, which imply a lower gas mass fraction in the planets' compositions, could make in-situ formation an increasingly viable explanation \citep[see e.g.][]{Lee2014}.
+\replaced{The stellar properties obtained through spectroscopic analysis therefore raise the planet masses by a factor of 8\% and lower the planet radii by a factor of 5\% relative to the transit and TTV-derived values.}{Compared to previously published planet parameters from L13, our newly derived values raise the planet masses and lower the planet radii substantially, resulting in an average bulk density increase of nearly 50\%.} The results are shown in Figure \ref{fig:mr}.
+
+\replaced{Adopting the stellar properties from spectroscopic analysis raises the mean densities of the Kepler-11 planets by $\sim$30\%.}{Our analysis raises the mean densities of the Kepler-11 planets by $\geq$20\% in all cases, with the two innermost planets undergoing the most substantial changes of 60\% and 95\%.} These increased densities, which imply a lower gas mass fraction in the planets' compositions, could make in-situ formation an increasingly viable explanation \citep[see e.g.][]{Lee2014}.
 
 \subsection{Stellar Composition \& Planets}
 
@@ -333,14 +336,14 @@ Regardless, it is surprising that a star that is nearly indistinguishable from t
 \begin{figure*}
 \centering
 \includegraphics[scale=0.6]{K11_massradius}
-\caption{Exoplanets with measured masses and radii. Transparencies of the black points scale with the relative error on planet parameters. Kepler-11 a-e are plotted in \replaced{red}{blue} (using the transit and TTV-derived parameters) and \replaced{blue}{red} (adjusted by the spectroscopic stellar parameters). Dashed lines show models of different compositions from \citet{Seager2007}.}
+\caption{Exoplanets with measured masses and radii. Transparencies of the black points scale with the relative error on planet parameters. Kepler-11 a-e are plotted in \replaced{red}{blue} (using the \replaced{transit and TTV-derived parameters}{L13 values}) and \replaced{blue}{red} \replaced{(adjusted by the spectroscopic stellar parameters)}{(using the spectroscopically-adjusted TTV results derived by us, as described in Section \ref{s:planetprop})}. Dashed lines show models of different compositions from \citet{Seager2007}.}
 \label{fig:mr}
 \end{figure*}
 
 
 \section{Conclusion}
 
-Using an extremely high-quality spectrum of the multi-planet host star Kepler-11, we have measured the stellar fundamental parameters and abundances to percent-level precision. We have also used a photodynamical model to fit the full \Kepler lightcurve. Our planet orbital parameters agree with past publications. However, we find that the host star is younger than previously thought by a factor of $\sim$3, with a higher \teff, \logg, and metallicity. Based on spectroscopic results, Kepler-11 and its planets are $\sim$\replaced{30\%}{25\%} denser than previously reported. These results stand in tension with the lightcurve results.
+Using an extremely high-quality spectrum of the multi-planet host star Kepler-11, we have measured the stellar fundamental parameters and abundances to percent-level precision. We have also used a photodynamical model to fit the full \Kepler lightcurve. Our planet orbital parameters agree with past publications. However, we find that the host star is younger than previously thought by a factor of $\sim$3, with a higher \teff, \logg, and metallicity. Based on spectroscopic results, Kepler-11 and its planets are \replaced{$\sim$30\%}{20-95\%} denser than previously reported. These results stand in tension with the lightcurve results.
 
 The five inner planets of the Kepler-11 system are key members of the exoplanet mass-radius diagram as examples of the surprisingly low densities found in some planetary systems. The substantial revision of their properties reported here underscores the importance of detailed host star follow-up. As the community looks to exponentially increase the number of exoplanets with measured bulk densities through TESS and beyond, it is critical to prioritize securing high-quality spectra of the host stars to enable the determination of precise host star properties.
 
@@ -371,13 +374,13 @@ M.B. is supported by a National Science Foundation Graduate Research Fellowship 
 \pagebreak
 
 \begin{longrotatetable}
-\begin{deluxetable*}{ccccccccccccccc} 
+\begin{deluxetable*}{cccccccccccccccc} 
 \centering
 \tablecaption{Line List and Measured Equivalent Widths.\label{tbl:ews}}
 \tabletypesize{\scriptsize}
 \tablehead{
 \colhead{Wavelength} & \colhead{Species} & 
-\colhead{EP} & \colhead{log($gf$)} & \colhead{Kepler-11} & \colhead{Sun} &
+\colhead{EP} & \colhead{log($gf$)} & \colhead{Kepler-11} & \colhead{Sun} & \colhead{Sun2\tablenotemark{1}} &
 \colhead{HD1178} & \colhead{HD10145} & 
 \colhead{HD16623} & \colhead{HD20329} & 
 \colhead{HD21727} & \colhead{HD21774} & \colhead{HD28474} &
@@ -386,16 +389,17 @@ M.B. is supported by a National Science Foundation Graduate Research Fellowship 
 \colhead{(m\r{A})} & \colhead{(m\r{A})} & \colhead{(m\r{A})} & 
 \colhead{(m\r{A})} & \colhead{(m\r{A})} & \colhead{(m\r{A})} & 
 \colhead{(m\r{A})} & \colhead{(m\r{A})} & \colhead{(m\r{A})} & 
-\colhead{(m\r{A})} & \colhead{(m\r{A})}
+\colhead{(m\r{A})} & \colhead{(m\r{A})} & \colhead{(m\r{A})}
 } 
 \startdata
-5052.167 & 6  & 7.685 & $-$1.24 & 35.2 & 33.5 & 32.7 & 27.9 & 21.4 & 29.4 & 26.6 & 41.6 & 17 & 27.4 & 36.7 \\
-6587.61 & 6 & 8.537 & $-$1.05 & 16.9 & 15.2 & 17 & 12.2 & 9.8 & 11.4 & 11.7 & 20.3 & 6.2 & 10.8 & 17 \\
-7111.47 & 6 & 8.64 & $-$1.07 & 13.2 & 11.3 & 12.1 & 15.1 & 9.6 & 12.3 & 10.9 & 16.6 & 36.7 & 10.2 & 14 \\
-7113.179 &  6 & 8.647 & $-$0.76 & 25.3 & 22.4 & 23.2 & 20.3 & 13.8 & 17.9 & 19.5 & 33 & 11.3 & 18.2 & 24.3 \\
-7771.944 & 8 & 9.146 & 0.37 & 77.8 & 69.7 & 79.1 & 63.6 & 71 & 69.4 & 62.9 & 79.9 & 56.9 & 61.5 & 81.8 \\
-  &  & & & & & & $\vdots$   & &  & & & & \\
+5052.167 & 6  & 7.685 & $-$1.24 & 35.2 & 33.5 & & 32.7 & 27.9 & 21.4 & 29.4 & 26.6 & 41.6 & 17 & 27.4 & 36.7 \\
+6587.61 & 6 & 8.537 & $-$1.05 & 16.9 & 15.2 & & 17 & 12.2 & 9.8 & 11.4 & 11.7 & 20.3 & 6.2 & 10.8 & 17 \\
+7111.47 & 6 & 8.64 & $-$1.07 & 13.2 & 11.3 & & 12.1 & 15.1 & 9.6 & 12.3 & 10.9 & 16.6 & 36.7 & 10.2 & 14 \\
+7113.179 &  6 & 8.647 & $-$0.76 & 25.3 & 22.4 & & 23.2 & 20.3 & 13.8 & 17.9 & 19.5 & 33 & 11.3 & 18.2 & 24.3 \\
+7771.944 & 8 & 9.146 & 0.37 & 77.8 & 69.7 & & 79.1 & 63.6 & 71 & 69.4 & 62.9 & 79.9 & 56.9 & 61.5 & 81.8 \\
+  &  & & & & & & $\vdots$   & &  & & & & & \\
 \enddata
+\added{\tablenotetext{1}{Solar equivalent widths used as reference for HD10145, HD21727, and HD191069 stellar parameters. The remaining stars use the other solar measurements.}}
 \tablecomments{Table \ref{tbl:ews} is published in its entirety in the machine-readable format. A portion is shown here for guidance regarding its form and content.}
 \end{deluxetable*}
 \end{longrotatetable}
