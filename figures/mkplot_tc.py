@@ -36,6 +36,35 @@ def onesigma_region(x_all, slopes, intercepts):
         y_hi[i] = np.percentile(sample,84)
     return y_lo, y_med, y_hi
     
+def get_full_errors(Star, Ref):
+    q2.abundances.one(Star, Ref=Ref, silent=True, errors=True) 
+    
+    err = []
+    abund = []
+    Tc = []
+    species_codes = sorted(set(Star.linelist['species']))
+    species_ids = q2.abundances.getsp_ids(species_codes)
+    for species_id in species_ids:
+        # get abundances:
+        Tc = np.append(Tc, q2.abundances.gettc(species_id))
+        species_difab = np.array(getattr(Star, species_id)['difab'])
+        species_difab = species_difab[species_difab != np.array(None)]  #remove Nones from where ref star was unavailable
+        abund = np.append(abund, np.mean(species_difab))
+        err = np.append(err, getattr(Star, species_id)['err_difab'])
+        
+    for t in set(Tc):
+        # eliminate duplicate measurements of the same element
+        ind = np.where(Tc == t)[0]
+        if len(ind) == 2:  # won't take care of 3+ states of the same thing
+            (abund[ind[0]], err[ind[0]]) = np.average(abund[ind], weights=err[ind], returned=True)
+            abund = np.delete(abund, ind[1])
+            err = np.delete(err, ind[1])
+            Tc = np.delete(Tc, ind[1])
+            species_ids = np.delete(species_ids, ind[1])
+            
+    return err
+    
+    
 
 if __name__ == "__main__":
     
@@ -55,7 +84,7 @@ if __name__ == "__main__":
     #sp.grid = 'odfnew'
     #sp.errors = True
     #q2.specpars.solve_one(K11, sp, Ref=sun)
-    q2.abundances.one(K11, Ref=sun, silent=True, errors=False) 
+    q2.abundances.one(K11, Ref=sun, silent=True, errors=True) 
     
     K11.OI['difab'] = np.array([ 0.053,  0.048,  0.028])  # manually apply NLTE corrections
     
@@ -81,13 +110,20 @@ if __name__ == "__main__":
     x_all = np.arange(2000)*1.0 - 100.0
     
 
-    abund_linear, err, Tc = q2.gce.correct(K11, age=4.6, method='linear', silent=True)
+    abund_linear, err, Tc = q2.gce.correct(K11, age=4.6, method='linear', silent=True, errors=True)
     #abund_linear = np.delete(abund_linear, 7)
     #err = np.delete(err, 7)
     #Tc = np.delete(Tc, 7)
     #abund_linear[7] -= 0.019  # LTE correction
     err[7] *= np.sqrt(2)
-    ax.errorbar(Tc,abund_linear,yerr=err,color=c1,mec=c1,fmt='o',markersize=10)
+    #ax.errorbar(Tc,abund_linear,yerr=err,color=c1,mec=c1,fmt='o',markersize=10)
+    #print "Scatter-based errors pre-GCE:", err
+    
+    #err_full = get_full_errors(K11, sun)
+    print "Full errors pre-GCE:", err
+    eb2 = ax.errorbar(Tc,abund_linear,yerr=err,color=c1,mec=c1,fmt='o',markersize=10)
+    #eb2[-1][0].set_linestyle('--')
+    
     
     popt, pcov = curve_fit(linear, Tc, abund_linear, sigma=err, absolute_sigma=True)
     plt.plot(x_all, linear(x_all, popt[0], popt[1]), color=c1, linewidth=2)
@@ -97,7 +133,10 @@ if __name__ == "__main__":
     
     
     # with GCE:
-    abund_linear, err, Tc = q2.gce.correct(K11, age=3.2, method='linear', silent=False)
+    abund_agelo, err, Tc = q2.gce.correct(K11, age=2.3, method='linear', silent=True, errors=True)
+    abund_agehi, err, Tc = q2.gce.correct(K11, age=4.1, method='linear', silent=True, errors=True)
+    abund_linear, err, Tc = q2.gce.correct(K11, age=3.2, method='linear', silent=True, errors=True)
+    age_err = np.max([np.abs(abund_linear - abund_agelo), np.abs(abund_linear - abund_agehi)])
     # exclude K:
     #abund_linear = np.delete(abund_linear, 7)
     #err = np.delete(err, 7)
@@ -108,6 +147,11 @@ if __name__ == "__main__":
     # get error bars with propagated age uncertainties:
     _, _, err2, _, _ = np.loadtxt('../data/tc_medianabund.txt', unpack=True)
     err = np.insert(err2, 7, err[7]) # insert KI
+    print "Errors post-GCE without age uncertainty:", err
+    err = np.sqrt(err**2 + age_err**2)
+    print "Errors post-GCE without age uncertainty:", err
+    
+
     
     
     ax = fig.add_subplot(1, 2, 2)
